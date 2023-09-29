@@ -1,0 +1,73 @@
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/*------ INICIO DE CLASES DE LOGIN -------*/
+html,body{
+    height: 100%;
+}
+.nav{
+    background-image: url('../../public/assets/img/maratonista.jpg');
+    background-position: center center;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+   
+    height: 100vh !important;
+}
+.titlem{
+    color: #003d71;
+    font-weight: lighter;
+    line-height: 1;
+    font-size: 1.5em;
+}
+.titlem-maraton{
+    color: #003d71;
+    font-weight: 500;
+    font-size: 2em;
+}
+.btm-orange{
+    background-color: #f6971d  !important;
+    color: rgb(0, 0, 0) !important;
+    border-radius: 0 !important;
+    border: 0 !important;    
+}
+.btm-blue{
+    background-color: #003d71  !important;
+    color: white !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+}
+.input-form{
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #003d71 !important;
+}
+.text-pass{
+    color: #003d71;
+}
+.text-pass_line-one{
+    line-height: 1;
+}
+.text-pass_line-more{
+    line-height: 1.2;
+}
+.icon-form{
+    color: rgb(119, 119, 119);
+    font-size: 3em;
+    margin: 0;
+    padding: 10%;
+    border: 1px solid rgb(119, 119, 119);
+    border-radius: 50%;
+}
+/*------ FIN DE CLASES DE LOGIN -------*/
+
+/*------ INICIO DE CLASES DE LOGIN -------*/
+.bgd-bloom{
+    background-color: #154360;
+}
+.textd-desc{
+    color: rgb(139, 139, 139);
+}
+
+
