@@ -1,18 +1,201 @@
 @import '@fortawesome/fontawesome-free/css/all.css';
-
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('/public/assets/font/Montserrat/static/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('/public/assets/font/Montserrat/static/Montserrat-Bold.ttf');
+}
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url('/public/assets/font/Montserrat/static/Montserrat-SemiBold.ttf');
+}
+@media screen and (min-width: 50px) and (max-width: 768px) {
+    /* Estilos específicos para dispositivos móviles */
+    .simply-section{
+        background: #ececec;
+        width:80px;
+        height: 80px;
+        margin: 0 2%;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .simply-amount{
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        background: linear-gradient(#022385,#0088CA);
+        -webkit-background-clip: text;
+        color: transparent;  
+    }
+    .simply-word{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #EE4141;
+        font-family:  Montserrat-Regular;
+    }
+}
+@media screen and (min-width: 769px)  {
+    /* Estilos específicos para dispositivos móviles */
+    .simply-section{
+        background: #ececec;
+        width:180px;
+        height: 150px;
+        margin: 0 2%;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .simply-amount{
+        display: block;
+        font-size: 50px;
+        font-weight: 700;
+        background: linear-gradient(#022385,#0088CA);
+        -webkit-background-clip: text;
+        color: transparent;  
+    }
+    .simply-word{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #EE4141;
+        font-family:  Montserrat-Regular;
+    }
+}
 /*------ INICIO DE CLASES DE LOGIN -------*/
 html,body{
     height: 100%;
+    font-family: Montserrat-Regular;
+}
+.link-verificacion{
+    font-family: Montserrat-bold;
+    color: #022385;
+    text-transform:uppercase;
+    font-size: 12px;
+}
+.icon-main{
+    font-size: 4em;
+    margin: 0 5% 0 0;
+    background: linear-gradient(#022385,#0088CA);
+    -webkit-background-clip: text;
+    color: transparent;  
 }
 .nav{
     background-image: url('../../public/assets/img/maratonista.jpg');
     background-position: center center;
-
     background-repeat: no-repeat;
     background-size: cover;
 }
+.logo{
+    font-family: Montserrat-Regular;
+    padding: 0;
+    margin: 0;
+}
+.logo-short{
+    letter-spacing:1px;
+    font-size: 10px;
+    color: #0088CA;
+}
+.logo-secondary{
+    letter-spacing:2px;
+    color: #022385;
+}
+.logo-main{
+    letter-spacing:10px;
+    line-height: 0.5;
+    font-family: Montserrat-Bold;
+    color: #022385;
+}
+
+.logo-date{
+    letter-spacing:1px;
+    font-size: 12px;
+    margin-top: 5%;
+    color: #0088CA;
+}
+.nav-items{
+    font-family:  Montserrat-Regular;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2;
+    color: #022385;
+}
+.nav-items-secondary{
+    font-size: 10px;
+    color: #EE4141;
+    font-family:Montserrat-Bold;
+}
+.text-second{
+    font-family:  Montserrat-Regular;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #022385;
+    font-size:1em;
+}
+.text-label{
+    color: #EE4141;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: Montserrat-SemiBold;
+    margin: 0;
+    padding: 0;
+}
+.text-foot{
+    font-family:  Montserrat-Regular;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 1% 0 0% 0;
+}
+
+.title-auspicio{
+    color: #002E80;
+    font-size: 2em;
+    font-family:  Montserrat-Regular;
+    letter-spacing: 5px;
+}
+.icon-item{
+    margin: 0 3%;
+}
+.item-link{
+    background-color: #ececec !important;
+    padding: 5%;
+    text-decoration: none;
+    color: #022385;
+    margin-top: 10%;
+    width: 100%;
+    border: 0;
+}
+.item-link:hover{
+    background-color: #EE4141 !important;
+    transition: all .5s;
+    color: #ececec;
+    text-decoration: none;
+}
+.item-link:focus{
+    border: 0;
+}
+.img-logo{
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+#contador{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+
 .main{
-   
     height: 100vh !important;
 }
 .titlem{
@@ -62,12 +245,30 @@ html,body{
 }
 /*------ FIN DE CLASES DE LOGIN -------*/
 
-/*------ INICIO DE CLASES DE LOGIN -------*/
-.bgd-bloom{
-    background-color: #154360;
+/*------ INICIO DE CLASES DE FORMULARIO -------*/
+.paper{
+    background-color: white;
+    box-shadow: 0px 21px 38px -21px rgba(0,0,0,0.68);
 }
-.textd-desc{
-    color: rgb(139, 139, 139);
+.title-form{
+    background: linear-gradient(#022385,#0088CA);
+    -webkit-background-clip: text;
+    color: transparent;  
 }
-
-
+.list-level{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   line-height: 1;
+}
+.number-bg{
+    background: linear-gradient(#022385,#0088CA);
+}
+.maraton{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0));
+  
+    background-image: url('../../public/assets/img/Fondo_maraton.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  
+}

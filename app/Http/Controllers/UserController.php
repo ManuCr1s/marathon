@@ -14,6 +14,14 @@ class UserController extends Controller
     public function index(){return view('welcome');}
     public function form(){return view('pages.form');}
     public function dashboard(){return view('pages.dashboard');}
+    public function download($nombreArchivo){
+        $rutaArchivo = public_path('assets/documents/'.$nombreArchivo);
+        if (file_exists($rutaArchivo)) {
+            return response()->download($rutaArchivo, $nombreArchivo);
+        } else {
+            abort(404);
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *

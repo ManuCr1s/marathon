@@ -17,4 +17,5 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/','index')->name('welcome');
     Route::get('/formulario','form')->name('form');
     Route::get('/tablero','dashboard')->name('dashboard');
+    Route::get('/documents/{nombreArchivo}', 'download')->name('download');
 });
