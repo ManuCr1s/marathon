@@ -1,15 +1,15 @@
-@import '@fortawesome/fontawesome-free/css/all.css';
+@import './../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 @font-face {
     font-family: Montserrat-Regular;
-    src: url('/public/assets/font/Montserrat/static/Montserrat-Regular.ttf');
+    src:"{{asset('assets/font/Montserrat/static/Montserrat-Regular.ttf')}}";
 }
 @font-face {
     font-family: Montserrat-Bold;
-    src: url('/public/assets/font/Montserrat/static/Montserrat-Bold.ttf');
+    src:"{{asset('assets/font/Montserrat/static/Montserrat-Bold.ttf')}}";
 }
 @font-face {
     font-family: Montserrat-SemiBold;
-    src: url('/public/assets/font/Montserrat/static/Montserrat-SemiBold.ttf');
+    src:"{{asset('assets/font/Montserrat/static/Montserrat-SemiBold.ttf')}}";
 }
 @media screen and (min-width: 50px) and (max-width: 768px) {
     /* Estilos específicos para dispositivos móviles */
@@ -72,6 +72,14 @@
     }
 }
 /*------ INICIO DE CLASES DE LOGIN -------*/
+.preloader{
+    margin: 0 auto;
+    height: 30vh;
+    width: 50vw;
+    top:0;
+    z-index: 9999;
+    background: url('../img/preloader.gif') 50% 50% no-repeat ;
+}
 html,body{
     height: 100%;
     font-family: Montserrat-Regular;
@@ -90,7 +98,7 @@ html,body{
     color: transparent;  
 }
 .nav{
-    background-image: url('../../public/assets/img/maratonista.jpg');
+    background-image: "{{asset('assets/img/maratonista.jpg')}}";
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,10 +273,12 @@ html,body{
     background: linear-gradient(#022385,#0088CA);
 }
 .maraton{
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0));
-  
-    background-image: url('../../public/assets/img/Fondo_maraton.jpg');
+    background-image: "{{asset('assets/img/Fondo_maraton.jpg')}}";
     background-attachment: fixed;
-    background-repeat: no-repeat;
-  
+    background-position: center;
+
+}
+.disabled-input{
+    pointer-events: none;
+    background-color: #ececec !important;
 }

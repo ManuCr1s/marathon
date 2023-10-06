@@ -69,15 +69,39 @@
                                 <img src="{{asset('assets/img/Coopac.jpeg')}}"  class="img-logo" alt="">
                             </div>
                             <div class="col-md-2">
-                                <img src="{{asset('assets/img/Coopac.jpeg')}}"  class="img-logo" alt="">
+                                <img src="{{asset('assets/img/mundo_zapatillas.jpeg')}}"  class="img-logo" alt="">
                             </div>
                             <div class="col-md-2">
-                                <img src="{{asset('assets/img/Coopac.jpeg')}}"  class="img-logo" alt="">
+                                <img src="{{asset('assets/img/muni_carhuamayo.jpeg')}}"  class="img-logo" alt="">
                             </div>
                         </div>
                         
                     </div>
                 
+                    <div class="col-md-12 d-flex justify-content-center my-2">
+                        <div class="row w-75">
+                            <div class="col-md-2">
+                                <img src="{{asset('assets/img/muni_nina.jpeg')}}"  class="img-logo" alt="">
+                            </div>
+                            <div class="col-md-2">
+                                <img src="{{asset('assets/img/muni_tinya.jpeg')}}"  class="img-logo" alt="">
+                            </div>
+                            <div class="col-md-2">
+                               
+                            </div>
+                            <div class="col-md-2">
+                               
+                            </div>
+                            <div class="col-md-2">
+                              
+                            </div>
+                            <div class="col-md-2">
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+
                 </div>
                 
                 

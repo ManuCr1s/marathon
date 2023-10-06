@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="py-3 text-center">
-                <p>¡Por favor!, registrese para poder participar de la maraton internacional mas alta del mundo meseta del <b>BOM BOM</b> - 2023</p>
+                <p>¡Por favor!, registrese para poder participar de la maraton internacional mas alta del mundo meseta del <b>BOMBON</b> - 2023</p>
             </div>
 
             <div class="row">
@@ -23,7 +23,7 @@
                     <ul class="list-group mb-3">
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0 d-flex justify-content-between"><span>Elite Varones</span><span>S/. 25000</span></h6>
+                                    <h6 class="my-0 d-flex justify-content-between"><span>Elite Varones</span><span>Total S/.88000</span></h6>
                                     <small class="text-muted"> 42.195 kilómetros de distancia.</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -37,7 +37,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0  d-flex justify-content-between"><span>Elite Damas</span><span>S/. 12000</span></h6>
+                                    <h6 class="my-0  d-flex justify-content-between"><span>Elite Damas</span><span>Total S/.43500</span></h6>
                                     <small class="text-muted"> 21 kilómetros de distancia.</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -51,7 +51,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0  d-flex justify-content-between"><span>Master</span><span>S/. 3000</span></h6>
+                                    <h6 class="my-0  d-flex justify-content-between"><span>Master</span><span>Total S/.20000</span></h6>
                                     <small class="text-muted"> 16 kilómetros de distancia.</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -66,7 +66,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0  d-flex justify-content-between"><span>Juveniles</span> <span>S/. 2500</span></h6>
+                                    <h6 class="my-0  d-flex justify-content-between"><span>Juveniles</span> <span>Total S/.15000</span></h6>
                                     <small class="text-muted"> 13 kilómetros de distancia.</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -81,7 +81,7 @@
                         
                         <li class="list-group-item d-flex justify-content-between bg-light">
                                 <div>
-                                    <h6 class="my-0  d-flex justify-content-between"><span>Menores</span> <span>S/. 1000</span></h6>
+                                    <h6 class="my-0  d-flex justify-content-between"><span>Menores</span> <span>Total S/.5400</span></h6>
                                     <small class="text-muted"> 8 kilómetros de distancia.</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -96,7 +96,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between bg-light">
                                 <div>
-                                    <h6 class="my-0  d-flex justify-content-between"><span>Junior</span><span>S/. 500</span></h6>
+                                    <h6 class="my-0  d-flex justify-content-between"><span>Junior</span><span>Total S/.2800</span></h6>
                                     <small class="text-muted"> 6 kilómetros de distancia.</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -111,7 +111,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between bg-light">
                                 <div>
-                                    <h6 class="my-0 d-flex justify-content-between"><span>Infantil</span><span>S/. 300</span></h6>
+                                    <h6 class="my-0 d-flex justify-content-between"><span>Infantil</span><span>Total S/.2000</span></h6>
                                     <small class="text-muted"> 2 1/2 kilómetros de distancia.</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -164,6 +164,8 @@
                                 <label for="country">Elija Pais</label>
                                 <select class="custom-select d-block w-100" id="country" required>
                                     <option value="0">Seleccione Pais</option>
+                                    <option value="1">Peru</option>
+                                    <option value="2">Chile</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Valid first name is required.
@@ -173,17 +175,22 @@
                                 <label for="document">Tipo documento <span class="text-muted"></span></label>
                                 <select class="custom-select d-block w-100" id="document" required>
                                     <option value="0">Seleccione Documento</option>
-                                    <option value="">Dni</option>
-                                    <option value="">Ruc</option>
-                                    <option value="">Carnet de Extranjeria</option>
+                                    <option value="1">Dni</option>
+                                    <option value="2">Carnet de Extranjeria</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Valid last name is required.
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3 ">
                                 <label for="lastName">Numero Documento</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex">
+                                        <input type="text" class="form-control" id="number_doc" placeholder="" value="" required>
+                                        <button class="btn btn-primary" id="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    </div>
+                                </div>
+                                
                                 <div class="invalid-feedback">
                                     Valid last name is required.
                                 </div>

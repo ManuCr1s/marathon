@@ -1,13 +1,7 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
-            <div class="carousel-item">
-                <img src="{{asset('assets/img/slogan.jpg')}}" class="d-block w-100" alt="...">
-            </div>
             <div class="carousel-item active">
-                <img src="{{asset('assets/img/maratonista_3.jpg')}}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{asset('assets/img/maratonista_3.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('assets/img/slogan.jpg')}}" class="d-block w-100" alt="...">
             </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">

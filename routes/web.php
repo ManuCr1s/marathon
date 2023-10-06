@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PersonController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +19,8 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/formulario','form')->name('form');
     Route::get('/tablero','dashboard')->name('dashboard');
     Route::get('/documents/{nombreArchivo}', 'download')->name('download');
+});
+
+Route::controller(PersonController::class)->group(function(){
+    Route::post('/dni','store')->name('dni');
 });

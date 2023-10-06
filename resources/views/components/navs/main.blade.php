@@ -5,7 +5,7 @@
 </div>
 <hr>
 <nav class="navbar navbar-expand-lg navbar-white bg-white">
-        <a class="navbar-brand d-flex" href="{{route('welcome')}}"><i class="fa-solid fa-person-running icon-main"></i><div><p class="logo logo-short">MARATON INTENACIONAL</p><p class="logo logo-short"></p><p class="logo logo-secondary">MESETA DEL</p><p class="logo logo-main">BOMBOM</p><p class="logo logo-date">Noviembre, 5 2023</p></div></a>
+        <a class="navbar-brand d-flex" href="{{route('welcome')}}"><i class="fa-solid fa-person-running icon-main"></i><div><p class="logo logo-short">MARATON INTENACIONAL</p><p class="logo logo-short"></p><p class="logo logo-secondary">MESETA DEL</p><p class="logo logo-main">BOMBON</p><p class="logo logo-date">Noviembre, 5 2023</p></div></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
