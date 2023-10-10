@@ -20,29 +20,33 @@ $(document).ready(function(){
                     success: function(datos_dni){
                         let myData = $.parseJSON(datos_dni),response;
                         response = validatePropiedad(myData);
-                        if(response.status == 'false') alertInput(false,response.message);
-                        if(!myData.status){
-                            swal({
-                                title: "Upps ah ocurrido un problema",
-                                text: myData.message,
-                                icon: "warning",
-                                buttons: "Click por favor",
-                             }).then(()=>{
-                                window.location.reload(); 
-                            })
+                        if(response.status == 'false'){ 
+                            alertInput(false,response.message);
                         }else{
-                            swal({
-                                title: "¡Felicitaciones!",
-                                text: myData.message,
-                                icon: "success",
-                                buttons: "Descargar Codigo",
-                             }).then(()=>{
-                                window.open(myData.url, '_blank');
-                                setTimeout(function() {
-                                    location.reload();
-                                }, 1000);
-                            })
+                            if(!myData.status){
+                                swal({
+                                    title: "Upps ah ocurrido un problema",
+                                    text: myData.message,
+                                    icon: "warning",
+                                    buttons: "Click por favor",
+                                 }).then(()=>{
+                                    window.location.reload(); 
+                                })
+                            }else{
+                                swal({
+                                    title: "¡Felicitaciones!",
+                                    text: myData.message,
+                                    icon: "success",
+                                    buttons: "Descargar Codigo",
+                                 }).then(()=>{
+                                    window.open(myData.url, '_blank');
+                                    setTimeout(function() {
+                                        location.reload();
+                                    }, 1000);
+                                })
+                            }
                         }
+                      
                     }
                 });
        
