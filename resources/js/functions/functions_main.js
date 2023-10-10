@@ -1,3 +1,4 @@
+import {inputNull,valueInput,ubicacionInput,levelInput} from '../functions/functions_date';
 /*Para el formulario de busqueda de DNI*/
 export function chainInput(input,type,btn,nom,ape,reg,pro,dist){
     input.on('change',function(){
@@ -54,22 +55,29 @@ export function tipeInput(tipo,numero,pais){
 }
 
 /*Par5a el formulario de ingreso de datos*/
-export function validateInput(pais,tipo,numero,nombre,apellido,region,provincia,distrito,categoria,sexo,fecha,direcccion,celular){
-    if(!(valueInput(pais)))return {'status':false, 'message':'Por favor Seleccione su Pais'}
-    if(!(valueInput(tipo)))return {'status':false, 'message':'Por favor Seleccione su Documento'}
+export function validateInput(pais,tipo,numero,nombre,apellido,region,provincia,distrito,categoria,sexo,fecha,direcccion,celular,form01,form02,form3,form4){
+    if(valueInput(pais))return {'status':false, 'message':'Por favor Seleccione su Pais'};
+    if(valueInput(tipo))return {'status':false, 'message':'Por favor Seleccione su Documento'}
     if(!(inputNull(numero)))return {'status':false, 'message':'Por favor ingrese su numero de documento'}
     if(!(inputNull(nombre)))return {'status':false, 'message':'Por favor ingrese su nombre para su inscripcion'}
     if(!(inputNull(apellido)))return {'status':false, 'message':'Por favor ingrese su apellido para su inscripcion'}
     if(pais.val() == 1){
-        if(valueInput(region))return {'status':false, 'message':'Por favor ingrese su Region'}
-        if(valueInput(provincia))return {'status':false, 'message':'Por favor ingrese su Provincia'}
-        if(valueInput(distrito))return {'status':false, 'message':'Por favor ingrese su Distrito'}
+        if(ubicacionInput(region))return {'status':false, 'message':'Por favor ingrese su Region'}
+        if(ubicacionInput(provincia))return {'status':false, 'message':'Por favor ingrese su Provincia'}
+        if(ubicacionInput(distrito))return {'status':false, 'message':'Por favor ingrese su Distrito'}
     }
-    if(valueInput(categoria))return {'status':false, 'message':'Por favor ingrese su Categoria'}
+    if(levelInput(categoria))return {'status':false, 'message':'Por favor ingrese su Categoria'}
     if(valueInput(sexo))return {'status':false, 'message':'Por favor ingrese su Sexo'}
-    if(inputNull(fecha))return {'status':false, 'message':'Por favor ingrese su Fecha de Nacimiento'}
-    if(inputNull(direcccion))return {'status':false, 'message':'Por favor ingrese su direccion'}
-    if(inputNull(celular))return {'status':false, 'message':'Por favor ingrese su numero de celular'}
+    if(!(inputNull(fecha)))return {'status':false, 'message':'Por favor ingrese su Fecha de Nacimiento'}
+    if(!(inputNull(direcccion)))return {'status':false, 'message':'Por favor ingrese su direccion'}
+    if(!(inputNull(celular)))return {'status':false, 'message':'Por favor ingrese su numero de celular'}
+    if(!(categoria.val() == 1 || categoria.val() == 2 || categoria.val() == 3)){
+        if(form01.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 01 es requerido'}
+        if(form02.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 02 es requerido'}
+    }
+    if(form3.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 03'}
+    if(form4.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 04'}
+    return {'status':true}
 }
 export function chainInput2(level,sexo,formato01,formato02){
     level.on('change',function(){
