@@ -174,10 +174,10 @@ html,body{
     margin: 0 3%;
 }
 .item-link{
-    background-color: #ececec !important;
+    background-color: #343a40 !important;
     padding: 5%;
     text-decoration: none;
-    color: #022385;
+    color: white;
     margin-top: 10%;
     width: 100%;
     border: 0;
