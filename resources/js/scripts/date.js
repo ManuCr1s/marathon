@@ -1,8 +1,10 @@
 import swal from "sweetalert";
 import bsCustomFileInput from 'bs-custom-file-input';
 import route from './route';
+import {valueForm} from './inputForms';
+import {validatePropiedad,alertInput} from "../functions/functions_main";
 $(document).ready(function(){
-    let form = $('#idForm'),data,url;
+    let valoresForm = valueForm(),form = $('#idForm'),data,url;
     bsCustomFileInput.init();
     form.on('submit',function(e){ 
         e.preventDefault();
@@ -16,7 +18,9 @@ $(document).ready(function(){
                     processData: false,
                     contentType: false,
                     success: function(datos_dni){
-                        let myData = $.parseJSON(datos_dni);
+                        let myData = $.parseJSON(datos_dni),response;
+                        response = validatePropiedad(myData);
+                        if(response.status == 'false') alertInput(false,response.message);
                         if(!myData.status){
                             swal({
                                 title: "Upps ah ocurrido un problema",

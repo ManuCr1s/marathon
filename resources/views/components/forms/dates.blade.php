@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <label for="country">Elija Pais</label>
-                                <select class="custom-select d-block w-100" id="country" name="pais" required>
+                                <select class="custom-select d-block w-100" id="country" name="pais" >
                                     <option value="0">Seleccione Pais</option>
                                     <option value="1">Peru</option>
                                     <option value="2">Chile</option>
@@ -18,7 +18,7 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="document">Tipo documento <span class="text-muted"></span></label>
-                                <select class="custom-select d-block w-100" id="document" name ="tipo" required>
+                                <select class="custom-select d-block w-100" id="document" name ="tipo" >
                                     <option value="0">Seleccione Documento</option>
                                     <option value="1">Dni</option>
                                     <option value="2">Carnet de Extranjeria</option>
@@ -31,7 +31,7 @@
                                 <label for="lastName">Numero Documento</label>
                                 <div class="row">
                                     <div class="col-md-12 d-flex">
-                                        <input type="text" class="form-control" id="number_doc" name="numero" placeholder="" value="" required>
+                                        <input type="text" class="form-control" id="number_doc" name="numero" placeholder="" value="" >
                                         <button class="btn btn-primary" id="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button>
                                     </div>
                                 </div>
@@ -44,14 +44,14 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName">Nombres</label>
-                                <input type="text" class="form-control" id="nombres" name="nombres" placeholder="" value="" required readonly>
+                                <input type="text" class="form-control" id="nombres" name="nombres" placeholder="" value=""  readonly>
                                 <div class="invalid-feedback">
                                     Valid first name is required.
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="lastName">Apellidos</label>
-                                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="" value="" required readonly>
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="" value=""  readonly>
                                 <div class="invalid-feedback">
                                     Valid last name is required.
                                 </div>
@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <label for="country">Region</label>
-                                <select class="custom-select d-block w-100" id="region" name="region" required>
+                                <select class="custom-select d-block w-100" id="region" name="region" >
                                     <option value="9999">Seleccione Region</option>
                                 </select>
                                 <div class="invalid-feedback">
@@ -69,7 +69,7 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="state">Provincia</label>
-                                <select class="custom-select d-block w-100" id="provincia" name="provincia" required>
+                                <select class="custom-select d-block w-100" id="provincia" name="provincia" >
                                     <option value="9999">Seleccione Provincia</option>
                                 </select>
                                 <div class="invalid-feedback">
@@ -78,7 +78,7 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="zip">Distrito</label>
-                                <select class="custom-select d-block w-100" id="distrito"  name="distrito"required>
+                                <select class="custom-select d-block w-100" id="distrito"  name="distrito">
                                     <option value="9999">Seleccione Distrito</option>
                                 </select>
                                 <div class="invalid-feedback">
@@ -95,7 +95,7 @@
 
                         <div class="mb-3">
                             <label for="level">Categorias <span class="text-muted"></span></label>
-                            <select class="custom-select d-block w-100" id="level" name="level" required>
+                            <select class="custom-select d-block w-100" id="level" name="level" >
                                 <option value="10">Seleccione Categoria</option>
                                 <option value="1">Elite Varones</option>
                                 <option value="2">Elite Mujeres</option>
@@ -114,7 +114,7 @@
                         <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="country">Sexo</label>
-                                    <select class="custom-select d-block w-100" id="genrs" name="genrs" required>
+                                    <select class="custom-select d-block w-100" id="genrs" name="genrs" >
                                         <option value="0">Seleccione</option>
                                         <option value="1">Fenenino</option>
                                         <option value="2">Masculino</option>
@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="state">Fecha Nacimiento</label>
-                                    <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Ingrese su Direccion" value="" required >
+                                    <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Ingrese su Direccion" value=""  >
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
@@ -134,14 +134,14 @@
                         <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">Direccion</label>
-                                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingrese su Direccion" value="" required >
+                                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingrese su Direccion" value=""  >
                                     <div class="invalid-feedback">
                                         Please select a valid country.
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">Numero de Celular</label>
-                                    <input type="text" class="form-control" id="celular" name="celular" placeholder="Ingrese Numero de Celular" value="" required >
+                                    <input type="text" class="form-control" id="celular" name="celular" placeholder="Ingrese Numero de Celular" value=""  >
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
@@ -156,14 +156,14 @@
                         <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <div>Autorizacion de Participacion</div>
-                                    <div class="custom-file">
+                                    <div class="custom-file" id="form01">
                                         <input type="file" class="custom-file-input" id="format01" name="format01">
                                         <label class="custom-file-label" for="customFile">Seleccione Formato 01</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <div>Constancia Medica</div>
-                                    <div class="custom-file">
+                                    <div class="custom-file" id="form02">
                                         <input type="file" class="custom-file-input" id="format02" name="format02">
                                         <label class="custom-file-label" for="customFile">Seleccione Formato 02</label>
                                     </div>

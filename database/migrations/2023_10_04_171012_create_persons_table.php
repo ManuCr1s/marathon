@@ -23,6 +23,8 @@ return new class extends Migration
             $table->integer('number')->nullable();
             $table->integer('type_doc');
             $table->dateTime('born', $precision = 3);
+            $table->string('addresd',255)->nullable();
+            $table->string('phone',100)->nullable();
             $table->unsignedBigInteger('id_country');
             $table->unsignedBigInteger('id_region');
             $table->unsignedBigInteger('id_province');
