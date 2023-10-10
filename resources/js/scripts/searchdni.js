@@ -1,13 +1,23 @@
 import swal from "sweetalert";
 import { onlyNumbers,chainInput,inputNull,tipeInput,validatePropiedad,alertInput} from "./functions";
+import bsCustomFileInput from 'bs-custom-file-input';
 import route from './route';
 $(document).ready(function(){
+    bsCustomFileInput.init();
     let numero_doc = $('#number_doc'),
         tipo_doc = $('#document'),
         pais = $('#country'),
-        dni =$('#icon_search'),datos,url,valor;
+        dni = $('#icon_search'),
+        nom=  $('#nombres'),
+        ape=  $('#apellidos'),
+        reg=  $('#region'),
+        prop=  $('#provincia'),
+        dist=  $('#distrito'),
+        cel =  $('#celular'),
+        datos,url,valor;
         numero_doc.on('keypress',onlyNumbers);
-    chainInput(pais,tipo_doc);
+        cel.on('keypress',onlyNumbers);
+    chainInput(pais,tipo_doc,dni,nom,ape,reg,prop,dist);
     dni.on('click',function(e){
         e.preventDefault();
         url = route.dni;
@@ -24,8 +34,8 @@ $(document).ready(function(){
                     success: function(datos_dni){
                        let myData = $.parseJSON(datos_dni);
                        valor = (validatePropiedad(myData,['pais','tipo','numero']));  
-                       alertInput(valor.status,valor.message);
-                       if(!myData.status){
+                       if(!(valor.status)){
+                            alertInput(valor.status,valor.message);/*
                               if(myData.message == 'not found'){
                                   swal({
                                       title: "Upps ah ocurrido un problema",
@@ -46,14 +56,14 @@ $(document).ready(function(){
                                    .then(() => {
                                       window.location.href = 'index.php';
                                    });
-                              }
+                              }*/
                                
                           }else{
-                               $('#nombre').val(myData['nombres']);
-                               $('#apellido').val(myData['apellidoPaterno'] + ' ' +myData['apellidoMaterno']);
-                               $('#dni').val(myData['numeroDocumento']);
+                               nom.val(valor['nombres']);
+                               ape.val(valor['apellidoPaterno'] + ' ' +valor['apellidoMaterno']);
+                               numero_doc.val(valor['numeroDocumento']);
                           }
-                          $("#preloader").hide();
+                    
                        }
                     });
                     /*

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('lastname',255);
             $table->boolean('genders');
             $table->char('number_ins',10);
-            $table->integer('number');
+            $table->integer('number')->nullable();
             $table->integer('type_doc');
             $table->dateTime('born', $precision = 3);
             $table->unsignedBigInteger('id_country');

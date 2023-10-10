@@ -5,18 +5,35 @@ export function onlyNumbers(code){
     return variable >= 48 && variable <= 57;
 }
 
-export function chainInput(input,type){
+export function chainInput(input,type,btn,nom,ape,reg,pro,dist){
     input.on('change',function(){
-        if(!(input.val() == 1 || input.val() == 0)){
+        if((input.val() == 1)){
             type.addClass('disabled-input');
-            type.val('2');
-        }else if(!(input.val() != 1 || input.val() == 0)){
-            type.addClass('disabled-input');
+            reg.removeClass('disabled-input');
+            dist.removeClass('disabled-input');
+            pro.removeClass('disabled-input');
             type.val('1');
-        }
-        else{
+            btn.removeClass('d-none');   
+            nom.attr('readonly','');
+            ape.attr('readonly','');  
+        }else if((input.val() == 0)){
             type.removeClass('disabled-input');
+            reg.removeClass('disabled-input');
+            dist.removeClass('disabled-input');
+            pro.removeClass('disabled-input');
             type.val('0');
+            btn.removeClass('d-none');  
+            nom.attr('readonly','');
+            ape.attr('readonly','');  
+        }else if((input.val() != 1)){
+            type.addClass('disabled-input');
+            reg.addClass('disabled-input');
+            dist.addClass('disabled-input');
+            pro.addClass('disabled-input');
+            type.val('2');
+            btn.addClass('d-none');  
+            nom.removeAttr('readonly');  
+            ape.removeAttr('readonly');  
         }
     });
 }
@@ -85,13 +102,13 @@ export function alertInput(status,message){
 }
 
 export function validatePropiedad(objeto,propiedad){
-    let valor;
+    let valor
     for(let i=0;i<=propiedad.length;i++){
         if(objeto.hasOwnProperty(propiedad[i])){
             valor = {'status':false,'propiedad':propiedad[i],'message':objeto[propiedad[i]][0]};
             break;
         }
-        valor = {'status':true};
+        valor = objeto;
     }
     return valor;
 }

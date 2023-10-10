@@ -4,3 +4,4 @@ import './bootstrap';
 import './scripts/datatbles';
 import './scripts/count';
 import './scripts/searchdni';
+import './scripts/date'

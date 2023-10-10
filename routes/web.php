@@ -23,4 +23,5 @@ Route::controller(UserController::class)->group(function(){
 
 Route::controller(PersonController::class)->group(function(){
     Route::post('/dni','store')->name('dni');
+    Route::post('/datos','file')->name('dates');
 });
