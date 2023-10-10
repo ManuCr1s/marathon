@@ -1,13 +1,12 @@
 import swal from "sweetalert";
 import bsCustomFileInput from 'bs-custom-file-input';
-import { onlyNumbers,chainInput,inputNull,tipeInput,validatePropiedad,alertInput} from "./functions";
 import route from './route';
 $(document).ready(function(){
     let form = $('#idForm'),data,url;
+    bsCustomFileInput.init();
     form.on('submit',function(e){ 
         e.preventDefault();
         data = new FormData(this);
-        console.log(data);
         url = route.dates;
                 $.ajax({
                     headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')},
@@ -18,7 +17,6 @@ $(document).ready(function(){
                     contentType: false,
                     success: function(datos_dni){
                         let myData = $.parseJSON(datos_dni);
-                        console.log(myData);
                         if(!myData.status){
                             swal({
                                 title: "Upps ah ocurrido un problema",
