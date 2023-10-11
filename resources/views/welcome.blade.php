@@ -27,11 +27,11 @@
                 </div>
 
                 <div class="row ">
-                    <div class="col-sm-4 d-flex justify-content-center">
-                        <a href="{{ route('download', ['nombreArchivo' => 'BASES_DE_LA_MARATON_INTERNCIONAL_2023.pdf']) }}" class="item-link"><i class="fa-solid fa-file icon-item"></i>DESCARGA BASES DEL CONCURSO</a>
+                    <div class="col-sm-4">
+                        <a href="{{ route('download', ['nombreArchivo' => 'BASES_DE_LA_MARATON_INTERNCIONAL_2023.pdf']) }}" class="item-link d-flex justify-content-center"><i class="fa-solid fa-file icon-item"></i>DESCARGA BASES DEL CONCURSO</a>
                     </div>
-                    <div class="col-sm-4 d-flex justify-content-center">
-                        <a href="{{route('form')}}" class="item-link"><i class="fa-solid fa-pencil icon-item"></i>FORMULARIO DE INSCRIPCION</a>
+                    <div class="col-sm-4">
+                        <a href="{{route('form')}}" class="item-link d-flex justify-content-center"><i class="fa-solid fa-pencil icon-item"></i>FORMULARIO DE INSCRIPCION</a>
                     </div>
                     <div class="col-sm-4 d-flex justify-content-center">
                             <!-- Button trigger modal -->
@@ -71,22 +71,22 @@
                 <div class="row">
                     <div class="col-md-12 d-flex justify-content-center my-5">
                         <div class="row w-75">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4">
                                 <img src="{{asset('assets/img/Coopac.jpeg')}}"  class="img-logo" alt="">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4">
                                 <img src="{{asset('assets/img/Irun.jpeg')}}"  class="img-logo" alt="">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4">
                                 <img src="{{asset('assets/img/Milpo.jpeg')}}"  class="img-logo" alt="">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4">
                                 <img src="{{asset('assets/img/muni_tinya.jpeg')}}"  class="img-logo" alt="">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4">
                                 <img src="{{asset('assets/img/mundo_zapatillas.jpeg')}}"  class="img-logo" alt="">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4">
                                 <img src="{{asset('assets/img/muni_carhuamayo.jpeg')}}"  class="img-logo" alt="">
                             </div>
                         </div>

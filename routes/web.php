@@ -30,4 +30,5 @@ Route::controller(PersonController::class)->group(function(){
 Route::controller(ProvinceController::class)->group(function(){
     Route::post('/provincia','store')->name('province');
     Route::post('/distrito','show')->name('district');
+    Route::post('/paises','find')->name('country');
 });

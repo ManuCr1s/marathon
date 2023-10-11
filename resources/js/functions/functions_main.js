@@ -206,3 +206,30 @@ export function dependency2(input,url,selec){
         });
     });
 }
+
+export function country(selec,url){
+        $.ajax({
+            headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')},
+            type:'POST',
+            url:url,
+            success: function(datos_dni){
+                let myData = $.parseJSON(datos_dni);
+                let increment = document.createElement('option'),
+                opciones = []; 
+                increment.value=0;
+                increment.text='Seleccione Pais';
+                opciones.push(increment);
+                for (const key in myData) {
+                    if (myData.hasOwnProperty(key)) {
+                        const opcion = document.createElement('option');
+                        opcion.value = myData[key].id_province;
+                        opcion.text = myData[key].nombre.toUpperCase();
+                        opciones.push(opcion);
+                    }
+                }
+                selec.html(opciones);
+                $("#preloader").hide();
+            }
+
+        });
+}

@@ -8,9 +8,6 @@
                             <div class="col-md-4 mb-3">
                                 <label for="country">Elija Pais</label>
                                 <select class="custom-select d-block w-100" id="country" name="pais" >
-                                    <option value="0">Seleccione Pais</option>
-                                    <option value="1">Peru</option>
-                                    <option value="2">Chile</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Valid first name is required.

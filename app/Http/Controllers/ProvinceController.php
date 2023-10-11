@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Province;
 use App\Models\District;
+use App\Models\Country;
+
 
 class ProvinceController extends Controller
 {
@@ -26,6 +28,12 @@ class ProvinceController extends Controller
     public function create()
     {
         //
+    }
+    public function find()
+    {
+        $paises = new Country;
+        $paises = Country::select('id_country', 'nombre')->get();
+        return json_encode($paises);
     }
 
     /**

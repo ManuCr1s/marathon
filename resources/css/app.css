@@ -41,6 +41,11 @@
         color: #EE4141;
         font-family:  Montserrat-Regular;
     }
+    .img-logo{
+        width: 60%;
+        margin: 0;
+        padding: 0;
+    }
 }
 @media screen and (min-width: 769px)  {
     /* Estilos específicos para dispositivos móviles */
@@ -70,6 +75,11 @@
         text-transform: uppercase;
         color: #EE4141;
         font-family:  Montserrat-Regular;
+    }
+    .img-logo{
+        width: 90%;
+        margin: 0;
+        padding: 0;
     }
 }
 /*------ INICIO DE CLASES DE LOGIN -------*/
@@ -198,11 +208,6 @@ html,body{
 }
 .item-link:focus{
     border: 0;
-}
-.img-logo{
-    width: 90%;
-    margin: 0;
-    padding: 0;
 }
 #contador{
     display: flex;

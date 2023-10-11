@@ -4,5 +4,6 @@ const route = {
     dates:`${APP_ROUTE}/datos`,
     provincia:`${APP_ROUTE}/provincia`,
     distrito:`${APP_ROUTE}/distrito`,
+    pais:`${APP_ROUTE}/paises`,
 }
 export default route 
