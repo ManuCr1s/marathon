@@ -71,9 +71,9 @@ export function validateInput(pais,tipo,numero,nombre,apellido,region,provincia,
     if(!(inputNull(fecha)))return {'status':false, 'message':'Por favor ingrese su Fecha de Nacimiento'}
     if(!(inputNull(direcccion)))return {'status':false, 'message':'Por favor ingrese su direccion'}
     if(!(inputNull(celular)))return {'status':false, 'message':'Por favor ingrese su numero de celular'}
-    if(categoria.val() == 1 || level.val() == 2 || level.val() == 3){
-        if(form1.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 01 es requerido'}
-        if(form2.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 02 es requerido'}
+    if(!(categoria.val() == 1 || categoria.val() == 2 || categoria.val() == 3)){
+        if(form01.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 01 es requerido'}
+        if(form02.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 02 es requerido'}
     }
     if(form3.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 03'}
     if(form4.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 04'}

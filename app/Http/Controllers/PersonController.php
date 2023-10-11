@@ -26,11 +26,13 @@ class PersonController extends Controller
         
         $validator = Validator::make($request->all(),$this->rules,$this->message);
         if($validator->fails())return json_encode($validator->errors());
+        
         $old = self::show($request->input('numero'));
+    
         if($old){
             return json_encode(array('status'=>false,'message' =>'El usuario ya se encuentra registrado'));
         }else{
-            if($request->input('tipo') == 1){
+            
                 $person = self::create(
                     $request->input('numero'),
                     $request->input('nombres'),
@@ -46,7 +48,6 @@ class PersonController extends Controller
                     $request->input('distrito'),
                     $request->input('level')
                 );
-                
                 if($request->input('level') == 1){
                     $extension = $request->file('format03')->getClientOriginalExtension();
                     $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
@@ -79,10 +80,8 @@ class PersonController extends Controller
                 $pdf = self::generarPdf($person['codigo']);
                 $pdf['status']=true;
                 $pdf['message'] = 'Ud. se ha registrado Satifactoriamente, por favor haga click en el boton para desgar su codigo';
-                return json_encode($pdf);
-            }
-        }
-       
+                return json_encode($pdf);         
+        } 
     }
     /**
      * Show the form for creating a new resource.
@@ -220,6 +219,10 @@ class PersonController extends Controller
         }else if($persona->message == 'dni no valido'){
             $persona->status = false;
             $persona->message = 'Por favor ingrese un DNI valido';
+        }else if($persona->message == 'not found'){
+            $persona->status = false;
+            $persona->message = 'Por favor registre sus nombres y apellidos';
+            $persona->active = false;
         }
         return $persona;
     }

@@ -8,6 +8,7 @@ $(document).ready(function(){
     bsCustomFileInput.init();
     form.on('submit',function(e){ 
         e.preventDefault();
+        $("#preloader").show();
         let validation = validateInput(
             valoresForm.pais,
             valoresForm.tipoDoc,
@@ -29,8 +30,9 @@ $(document).ready(function(){
         );
         if(!(validation.status)){
             alertInput(false,validation.message);
+            $("#preloader").hide();
         }else{
-                     data = new FormData(this);
+            data = new FormData(this);
             url = route.dates;
                     $.ajax({
                         headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')},
@@ -54,6 +56,7 @@ $(document).ready(function(){
                                      }).then(()=>{
                                         window.location.reload(); 
                                     })
+
                                 }else{
                                     swal({
                                         title: "¡Felicitaciones!",
@@ -68,7 +71,7 @@ $(document).ready(function(){
                                     })
                                 }
                             }
-                          
+                            $("#preloader").hide();
                         }
                     });
         }       

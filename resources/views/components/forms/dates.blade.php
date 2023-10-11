@@ -148,9 +148,12 @@
                                 </div>
                         </div>
                         <hr class="my-4">
-                        <div class="row">
-                            <div class="col-md-12">
+                        <div class="row my-4">
+                            <div class="col-md-6">
                                 <h6 class="text-secondary">Registro de Documentos adjuntos</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{{ route('download', ['nombreArchivo' => 'FORMATOS_01_02_03_04.pdf']) }}" class="btn btn-secondary d-flex justify-content-center"><i class="fa-solid fa-file icon-item"></i>DESCARGA FORMATOS</a>
                             </div>
                         </div>
                         <div class="row">

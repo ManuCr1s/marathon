@@ -1,15 +1,16 @@
-@import './../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '@fortawesome/fontawesome-free/css/all.css';
 @font-face {
     font-family: Montserrat-Regular;
-    src:"{{asset('assets/font/Montserrat/static/Montserrat-Regular.ttf')}}";
+    src:url('../../public/assets/font/Montserrat/static/Montserrat-Regular.ttf');
 }
 @font-face {
     font-family: Montserrat-Bold;
-    src:"{{asset('assets/font/Montserrat/static/Montserrat-Bold.ttf')}}";
+    src:url('../../public/assets/font/Montserrat/static/Montserrat-Bold.ttf');
+  
 }
 @font-face {
     font-family: Montserrat-SemiBold;
-    src:"{{asset('assets/font/Montserrat/static/Montserrat-SemiBold.ttf')}}";
+    src:url('../../public/assets/font/Montserrat/static/Montserrat-SemiBold.ttf');
 }
 @media screen and (min-width: 50px) and (max-width: 768px) {
     /* Estilos específicos para dispositivos móviles */
@@ -73,12 +74,16 @@
 }
 /*------ INICIO DE CLASES DE LOGIN -------*/
 .preloader{
-    margin: 0 auto;
-    height: 30vh;
-    width: 50vw;
-    top:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
-    background: url('../img/preloader.gif') 50% 50% no-repeat ;
 }
 html,body{
     height: 100%;
@@ -97,8 +102,11 @@ html,body{
     -webkit-background-clip: text;
     color: transparent;  
 }
+.btn-link{
+    font-size: .8;
+}
 .nav{
-    background-image: "{{asset('assets/img/maratonista.jpg')}}";
+    background-image:url("{{asset('assets/img/maratonista.jpg')}}") ;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -273,7 +281,7 @@ html,body{
     background: linear-gradient(#022385,#0088CA);
 }
 .maraton{
-    background-image: "{{asset('assets/img/Fondo_maraton.jpg')}}";
+    background-image:url('../../public/assets/img/Fondo_maraton.jpg');
     background-attachment: fixed;
     background-position: center;
 
@@ -281,4 +289,12 @@ html,body{
 .disabled-input{
     pointer-events: none;
     background-color: #ececec !important;
+}
+.bg-blue{
+    background-color: #0065a5;
+}
+.text-preloader{
+    color: #002E80;
+    font-size: 1em;
+    font-weight: bold;
 }

@@ -5,6 +5,7 @@ import {valueForm} from './inputForms';
 import {onlyNumbers} from '../functions/functions_date';
 import {chainInput,chainInput2} from "../functions/functions_main";
 $(document).ready(function(){
+    $("#preloader").hide();
     let valoresForm = valueForm(),form01=$('#form01'),form02=$('#form02');
     /*EVENTO DE PULSO*/
     valoresForm.numeroDni.on('keypress',onlyNumbers);
