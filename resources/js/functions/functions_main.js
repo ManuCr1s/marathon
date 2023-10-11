@@ -149,7 +149,11 @@ export function dependency(input,url,selec){
             data:datos,
             success: function(datos_dni){
                 let myData = $.parseJSON(datos_dni);
-                let opciones = []; 
+                let increment = document.createElement('option'),
+                opciones = []; 
+                increment.value=9999;
+                increment.text='Seleccione Provincia';
+                opciones.push(increment);
                 for (const key in myData) {
                     if (myData.hasOwnProperty(key)) {
                         const opcion = document.createElement('option');
@@ -179,7 +183,11 @@ export function dependency2(input,url,selec){
             data:datos,
             success: function(datos_dni){
                 let myData = $.parseJSON(datos_dni);
-                let opciones = []; 
+                let increment = document.createElement('option'),
+                opciones = []; 
+                increment.value=9999;
+                increment.text='Seleccione Distrito';
+                opciones.push(increment);
                 for (const key in myData) {
                     if (myData.hasOwnProperty(key)) {
                         const opcion = document.createElement('option');
