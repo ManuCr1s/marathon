@@ -194,7 +194,7 @@ export function dependency2(input,url,selec){
                 for (const key in myData) {
                     if (myData.hasOwnProperty(key)) {
                         const opcion = document.createElement('option');
-                        opcion.value = myData[key].id_province;
+                        opcion.value = myData[key].id_district;
                         opcion.text = myData[key].nombre.toUpperCase();
                         opciones.push(opcion);
                     }
