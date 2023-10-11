@@ -50,13 +50,15 @@
                                             <div class="col-md-4 p-5">
                                                 <h3 class="text-center text-white"><b>Números de Contactos</b></h3>
                                                 <h6 class="text-center text-white">Por favor sirvase llamar a los siguiente numeros, para cualquier consulta</h6>
-                                                    <h2 class="text-center text-warning"><b>963 957 394</b></h2>
-                                                    <h2 class="text-center text-warning"><b>934 292 007</b></h2>
-                                                    <h2 class="text-center text-warning"><b>935 964 991</b></h2>
+                                                    <h3 class="text-center text-warning"><b>963 957 394</b></h3>
+                                                    <h3 class="text-center text-warning"><b>934 292 007</b></h3>
+                                                    <h3 class="text-center text-warning"><b>935 964 991</b></h3>
                                                 <hr>
                                                 <h6 class="text-center text-white">Soporte si tiene problema de su inscripcion</h6>
-                                                    <h2 class="text-center text-warning"><b>910 108 053</b></h2>
-                                                    <h2 class="text-center text-warning"><b>943 985 026</b></h2>
+                                                    <h3 class="text-center text-warning"><b>910 108 053</b></h3>
+                                                    <h3 class="text-center text-warning"><b>943 985 026</b></h3>
+                                                    <h3 class="text-center text-warning"><b>912 864 189</b></h3>
+                                                    
                                             </div>
                                         </div>
 
