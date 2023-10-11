@@ -62,6 +62,31 @@
                                 <label for="country">Region</label>
                                 <select class="custom-select d-block w-100" id="region" name="region" >
                                     <option value="9999">Seleccione Region</option>
+                                    <option value="1">AMAZONAS</option>
+                                    <option value="2">ANCASH</option>
+                                    <option value="3">APURIMAC</option>
+                                    <option value="4">AREQUIPA</option>
+                                    <option value="5">AYACUCHO</option>
+                                    <option value="6">CAJAMARCA</option>
+                                    <option value="7">CALLAO</option>
+                                    <option value="8">CUSCO</option>
+                                    <option value="9">HUANCAVELICA</option>
+                                    <option value="10">HUANUCO</option>
+                                    <option value="11">ICA</option>
+                                    <option value="12">JUNIN</option>
+                                    <option value="13">LA LIBERTAD</option>
+                                    <option value="14">LAMBAYEQUE</option>
+                                    <option value="15">LIMA</option>
+                                    <option value="16">LORETO</option>
+                                    <option value="17">MADRE DE DIOS</option>
+                                    <option value="18">MOQUEGUA</option>
+                                    <option value="19">PASCO</option>
+                                    <option value="20">PIURA</option>
+                                    <option value="21">PUNO</option>
+                                    <option value="22">SAN MARTIN</option>
+                                    <option value="23">TACNA</option>
+                                    <option value="24">TUMBES</option>
+                                    <option value="25">UCAYALI</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
