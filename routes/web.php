@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\ProvinceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,4 +25,9 @@ Route::controller(UserController::class)->group(function(){
 Route::controller(PersonController::class)->group(function(){
     Route::post('/dni','store')->name('dni');
     Route::post('/datos','file')->name('dates');
+});
+
+Route::controller(ProvinceController::class)->group(function(){
+    Route::post('/provincia','store')->name('province');
+    Route::post('/distrito','show')->name('district');
 });
