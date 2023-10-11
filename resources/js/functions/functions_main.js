@@ -214,6 +214,7 @@ export function country(selec,url){
             url:url,
             success: function(datos_dni){
                 let myData = $.parseJSON(datos_dni);
+                console.log(myData);
                 let increment = document.createElement('option'),
                 opciones = []; 
                 increment.value=0;
@@ -222,7 +223,7 @@ export function country(selec,url){
                 for (const key in myData) {
                     if (myData.hasOwnProperty(key)) {
                         const opcion = document.createElement('option');
-                        opcion.value = myData[key].id_province;
+                        opcion.value = myData[key].id_country;
                         opcion.text = myData[key].nombre.toUpperCase();
                         opciones.push(opcion);
                     }
