@@ -23,6 +23,7 @@ class PersonController extends Controller
 
     public function file(Request $request)
     {
+        
         $validator = Validator::make($request->all(),$this->rules,$this->message);
         if($validator->fails())return json_encode($validator->errors());
         $person = self::create(
@@ -40,6 +41,7 @@ class PersonController extends Controller
             $request->input('distrito'),
             $request->input('level')
         );
+        
         if($request->input('level') == 1){
             $extension = $request->file('format03')->getClientOriginalExtension();
             $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
@@ -108,7 +110,7 @@ class PersonController extends Controller
     private $rules = [
         'pais'=>'not_in:0',
         'tipo'=>'not_in:0',
-        'numero' => 'required|min:8|max:20',
+        'numero' => 'required|min:8|max:25',
         'nombres' => 'required',
         'apellidos' => 'required',
         'region'=> 'required_if:pais,1',

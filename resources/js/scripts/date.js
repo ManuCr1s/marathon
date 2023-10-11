@@ -30,7 +30,7 @@ $(document).ready(function(){
         if(!(validation.status)){
             alertInput(false,validation.message);
         }else{
-            data = new FormData(this);
+                     data = new FormData(this);
             url = route.dates;
                     $.ajax({
                         headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')},
@@ -72,6 +72,7 @@ $(document).ready(function(){
                         }
                     });
         }       
-
+        
+       
     })
 });

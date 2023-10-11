@@ -58,7 +58,7 @@ export function tipeInput(tipo,numero,pais){
 export function validateInput(pais,tipo,numero,nombre,apellido,region,provincia,distrito,categoria,sexo,fecha,direcccion,celular,form01,form02,form3,form4){
     if(valueInput(pais))return {'status':false, 'message':'Por favor Seleccione su Pais'};
     if(valueInput(tipo))return {'status':false, 'message':'Por favor Seleccione su Documento'}
-    if(!(inputNull(numero)))return {'status':false, 'message':'Por favor ingrese su numero de documento'}
+    if(!(numero.val().length == 8 || numero.val().length == 20))return {'status':false, 'message':'Por favor ingrese su numero de documento valido'}
     if(!(inputNull(nombre)))return {'status':false, 'message':'Por favor ingrese su nombre para su inscripcion'}
     if(!(inputNull(apellido)))return {'status':false, 'message':'Por favor ingrese su apellido para su inscripcion'}
     if(pais.val() == 1){
@@ -71,9 +71,9 @@ export function validateInput(pais,tipo,numero,nombre,apellido,region,provincia,
     if(!(inputNull(fecha)))return {'status':false, 'message':'Por favor ingrese su Fecha de Nacimiento'}
     if(!(inputNull(direcccion)))return {'status':false, 'message':'Por favor ingrese su direccion'}
     if(!(inputNull(celular)))return {'status':false, 'message':'Por favor ingrese su numero de celular'}
-    if(!(categoria.val() == 1 || categoria.val() == 2 || categoria.val() == 3)){
-        if(form01.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 01 es requerido'}
-        if(form02.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 02 es requerido'}
+    if(categoria.val() == 1 || level.val() == 2 || level.val() == 3){
+        if(form1.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 01 es requerido'}
+        if(form2.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 02 es requerido'}
     }
     if(form3.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 03'}
     if(form4.get(0).files.length === 0)return{'status':false, 'message':'Por favor adjunte Formato 04'}
