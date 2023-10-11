@@ -23,8 +23,11 @@ export function chainInput(input,type,btn,nom,ape,reg,pro,dist){
         }else if((input.val() != 1)){
             type.addClass('disabled-input');
             reg.addClass('disabled-input');
+            reg.val('9999');
             dist.addClass('disabled-input');
+            dist.val('9999');
             pro.addClass('disabled-input');
+            pro.val('9999');
             type.val('2');
             btn.addClass('d-none');  
             nom.removeAttr('readonly');  
