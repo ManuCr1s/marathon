@@ -26,55 +26,63 @@ class PersonController extends Controller
         
         $validator = Validator::make($request->all(),$this->rules,$this->message);
         if($validator->fails())return json_encode($validator->errors());
-        $person = self::create(
-            $request->input('numero'),
-            $request->input('nombres'),
-            $request->input('apellidos'),
-            $request->input('genrs'),
-            $request->input('tipo'),
-            $request->input('fecha'),
-            $request->input('direccion'),
-            $request->input('celular'),
-            $request->input('pais'),
-            $request->input('region'),
-            $request->input('provincia'),
-            $request->input('distrito'),
-            $request->input('level')
-        );
-        
-        if($request->input('level') == 1){
-            $extension = $request->file('format03')->getClientOriginalExtension();
-            $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-            $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format04')->storeAs('public', $nombrePersonalizado4);   
-        }else if($request->input('level') == 2){
-            $extension = $request->file('format03')->getClientOriginalExtension();
-            $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-            $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format04')->storeAs('public', $nombrePersonalizado4);     
-        }else if($request->input('level') == 3){
-            $extension = $request->file('format03')->getClientOriginalExtension();
-            $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-            $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format04')->storeAs('public', $nombrePersonalizado4);
+        $old = self::show($request->input('numero'));
+        if($old){
+            return json_encode(array('status'=>false,'message' =>'El usuario ya se encuentra registrado'));
         }else{
-            $extension = $request->file('format01')->getClientOriginalExtension();
-            $nombrePersonalizado = $person['codigo'].'_'.'formato01'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format01')->storeAs('public', $nombrePersonalizado);
-            $nombrePersonalizado2 = $person['codigo'].'_'.'formato02'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format02')->storeAs('public', $nombrePersonalizado2);
-            $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-            $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-            $request->file('format04')->storeAs('public', $nombrePersonalizado4);
+            if($request->input('tipo') == 1){
+                $person = self::create(
+                    $request->input('numero'),
+                    $request->input('nombres'),
+                    $request->input('apellidos'),
+                    $request->input('genrs'),
+                    $request->input('tipo'),
+                    $request->input('fecha'),
+                    $request->input('direccion'),
+                    $request->input('celular'),
+                    $request->input('pais'),
+                    $request->input('region'),
+                    $request->input('provincia'),
+                    $request->input('distrito'),
+                    $request->input('level')
+                );
+                
+                if($request->input('level') == 1){
+                    $extension = $request->file('format03')->getClientOriginalExtension();
+                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
+                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);   
+                }else if($request->input('level') == 2){
+                    $extension = $request->file('format03')->getClientOriginalExtension();
+                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
+                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);     
+                }else if($request->input('level') == 3){
+                    $extension = $request->file('format03')->getClientOriginalExtension();
+                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
+                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);
+                }else{
+                    $extension = $request->file('format01')->getClientOriginalExtension();
+                    $nombrePersonalizado = $person['codigo'].'_'.'formato01'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format01')->storeAs('public', $nombrePersonalizado);
+                    $nombrePersonalizado2 = $person['codigo'].'_'.'formato02'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format02')->storeAs('public', $nombrePersonalizado2);
+                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
+                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
+                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);
+                }
+                $pdf = self::generarPdf($person['codigo']);
+                $pdf['status']=true;
+                $pdf['message'] = 'Ud. se ha registrado Satifactoriamente, por favor haga click en el boton para desgar su codigo';
+                return json_encode($pdf);
+            }
         }
-        $pdf = self::generarPdf($person['codigo']);
-        $pdf['status']=true;
-        $pdf['message'] = 'Ud. se ha registrado Satifactoriamente, por favor haga click en el boton para desgar su codigo';
-        return json_encode($pdf);
+       
     }
     /**
      * Show the form for creating a new resource.
