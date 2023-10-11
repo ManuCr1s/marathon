@@ -68,7 +68,7 @@
                 <div class="form-inscription">
                         <div class="bgc-white mb-5 pt-4 pl-5 pr-5 pb-5">
                                 <p class="text-center number">
-                                    {{data}}
+                                    {{$data}}
                                 </p>
                                 <p class="text-center title-number">
                                    NUMERO DE INSCRITO
