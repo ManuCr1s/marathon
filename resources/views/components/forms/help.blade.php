@@ -1,7 +1,7 @@
 <ul class="list-group mb-3">
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0 bg-secondary text-white"><span>Paso uno</span></h6>
+                                    <h6 class="my-0 bg-success text-white"><span>Paso uno</span></h6>
                                     <small class="text-muted"> Ingreso sus datos Personales</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
@@ -16,7 +16,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                                    <h6 class="my-0 bg-secondary text-white"><span>Paso dos</span></h6>
+                                    <h6 class="my-0 bg-success text-white"><span>Paso dos</span></h6>
                                     <small class="text-muted"> Seleccione Categoria</small>   
                                     <h6 class="mb-2  d-flex justify-content-between"><span>CATEGORIA</span><span>EDADES</span></h6>
                                     
@@ -55,7 +55,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0 bg-secondary text-white"><span>Paso tres</span></h6>
+                                    <h6 class="my-0 bg-success text-white"><span>Paso tres</span></h6>
                                     <small class="text-muted"> Ingreso de formatos</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
