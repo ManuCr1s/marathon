@@ -20,6 +20,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/formulario','form')->name('form');
     Route::get('/tablero','dashboard')->name('dashboard');
     Route::get('/documents/{nombreArchivo}', 'download')->name('download');
+    Route::get('/login','login')->name('login');
 });
 
 Route::controller(PersonController::class)->group(function(){

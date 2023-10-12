@@ -21,7 +21,7 @@
                     <a class="nav-link nav-items" href="{{ route('download', ['nombreArchivo' => 'BASES_DE_LA_MARATON_INTERNCIONAL_2023.pdf']) }}">Bases <p class="nav-items-secondary">Documentos Inscripcion</p></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-items" href="#">Voluntarios <p class="nav-items-secondary">Ingreso Funcionarios</p></a>
+                    <a class="nav-link nav-items" href="{{route('login')}}">Voluntarios <p class="nav-items-secondary">Ingreso Funcionarios</p></a>
                 </li>
             </ul>
             

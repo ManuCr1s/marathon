@@ -64,7 +64,7 @@
                                         </li>
                                         <br>
                                         <li class="text-muted">
-                                            <small class="text-muted">»<b>Si participa de la categoria ELITE, MASTER no es necesario los formatos 03 Y 04, para las demas categorias es obligatorio</b></small>           
+                                            <small class="text-muted">»<b>Si participa de la categoria ELITE, MASTER solo es necesariio los formatos 03 Y 04, para las demas categorias es obligatorio los 4 formatos</b></small>           
                                         </li>
                                     </ul>                                   
                                 </div> 
