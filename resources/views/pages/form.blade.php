@@ -17,10 +17,13 @@
             <div class="row">
                 <div class="col-md-4 order-md-2 mb-4">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-muted">Categorias</span>   
+                        <span class="text-primary">Por favor lea las instrucciones</span>  
+                        {{-- 
                         <span class="badge badge-secondary badge-pill number-bg">9</span>
+                        --}}
                     </h4>
-                    <x-forms.level/>
+                    
+                    <x-forms.help/>
             </div>
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Registro de Datos Personales</h4>
