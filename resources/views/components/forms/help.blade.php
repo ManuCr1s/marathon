@@ -59,7 +59,7 @@
                                     <small class="text-muted"> Ingreso de formatos</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
-                                            <small class="text-muted">»<b> Por favor hacer click en el boton, DESCARGA FORMATOS</b></small>   
+                                            <small class="text-muted">»<b> Por favor hacer click en el boton, DESCARGA FORMATOS, rellenarlos con su firma y huella, y subirlos en formato PDF</b></small>   
                                             <a href="{{ route('download', ['nombreArchivo' => 'FORMATOS_01_02_03_04.pdf']) }}" class="btn btn-warning d-flex justify-content-center mt-3"><i class="fa-solid fa-file icon-item"></i>DESCARGA FORMATOS</a>       
                                         </li>
                                         <br>
