@@ -172,43 +172,20 @@
                         <hr class="my-4">
                         <div class="row my-4">
                             <div class="col-md-6">
-                                <h6 class="text-secondary">Registro de Documentos adjuntos</h6>
+                                <h4 class="text-black">FORMATOS PARA ADJUNTAR</h4>
                             </div>
                             <div class="col-md-6">
                                 <a href="{{ route('download', ['nombreArchivo' => 'FORMATOS_01_02_03_04.pdf']) }}" class="btn btn-secondary d-flex justify-content-center"><i class="fa-solid fa-file icon-item"></i>DESCARGA FORMATOS</a>
                             </div>
                         </div>
-                        <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div>Autorizacion de Participacion</div>
-                                    <div class="custom-file" id="form01">
-                                        <input type="file" class="custom-file-input" id="format01" name="format01">
-                                        <label class="custom-file-label" for="customFile">Seleccione Formato 01</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div>Constancia Medica</div>
-                                    <div class="custom-file" id="form02">
-                                        <input type="file" class="custom-file-input" id="format02" name="format02">
-                                        <label class="custom-file-label" for="customFile">Seleccione Formato 02</label>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div>Declaracion Jurada</div>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="format03" name="format03">
-                                        <label class="custom-file-label" for="customFile">Seleccione Formato 03</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div>Deslinde de responsabilidad</div>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="format04" name="format04">
-                                        <label class="custom-file-label" for="customFile">Seleccione Formato 04</label>
-                                    </div>
-                                </div>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <h5>¡Por favor!, imprimir los formatos y rellenarlos con su firma y huella dactilar. Traer impreso el dia del recojo de su kit de corredor.</h5>
+                                <h5>¡OJO!, Si participa de la categoria ELITE, MASTER solo es necesario los formatos 03 Y 04, para las demas categorias es obligatorio los 4 formatos</h5>
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
                         </div>
                         <hr class="my-4">
                         <button class="btn btn-primary btn-lg btn-block" type="submit">Registrarse Ahora</button>

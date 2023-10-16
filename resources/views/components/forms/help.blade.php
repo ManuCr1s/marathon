@@ -56,15 +56,15 @@
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
                                     <h6 class="my-0 bg-success text-white"><span>Paso tres</span></h6>
-                                    <small class="text-muted"> Ingreso de formatos</small>      
+                                    <small class="text-muted"> Descarga de formatos</small>      
                                     <ul class="list-level">
                                         <li class="text-muted">
-                                            <small class="text-muted">»<b> Por favor hacer click en el boton, DESCARGA FORMATOS, rellenarlos con su firma y huella, y subirlos en formato PDF</b></small>   
+                                            <small class="text-muted">»<b> Por favor hacer click en el boton, DESCARGA FORMATOS, rellenarlos con su firma y huella</b></small>   
                                             <a href="{{ route('download', ['nombreArchivo' => 'FORMATOS_01_02_03_04.pdf']) }}" class="btn btn-warning d-flex justify-content-center mt-3"><i class="fa-solid fa-file icon-item"></i>DESCARGA FORMATOS</a>       
                                         </li>
                                         <br>
                                         <li class="text-muted">
-                                            <small class="text-muted">»<b>Si participa de la categoria ELITE, MASTER solo es necesariio los formatos 03 Y 04, para las demas categorias es obligatorio los 4 formatos</b></small>           
+                                            <small class="text-muted">»<b>Si participa de la categoria ELITE, MASTER solo es necesario los formatos 03 Y 04, para las demas categorias es obligatorio los 4 formatos</b></small>           
                                         </li>
                                     </ul>                                   
                                 </div> 

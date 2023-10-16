@@ -48,38 +48,9 @@ class PersonController extends Controller
                     $request->input('distrito'),
                     $request->input('level')
                 );
-                if($request->input('level') == 1){
-                    $extension = $request->file('format03')->getClientOriginalExtension();
-                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);   
-                }else if($request->input('level') == 2){
-                    $extension = $request->file('format03')->getClientOriginalExtension();
-                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);     
-                }else if($request->input('level') == 3){
-                    $extension = $request->file('format03')->getClientOriginalExtension();
-                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);
-                }else{
-                    $extension = $request->file('format01')->getClientOriginalExtension();
-                    $nombrePersonalizado = $person['codigo'].'_'.'formato01'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format01')->storeAs('public', $nombrePersonalizado);
-                    $nombrePersonalizado2 = $person['codigo'].'_'.'formato02'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format02')->storeAs('public', $nombrePersonalizado2);
-                    $nombrePersonalizado3 = $person['codigo'].'_'.'formato03'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format03')->storeAs('public', $nombrePersonalizado3);
-                    $nombrePersonalizado4 = $person['codigo'].'_'.'formato04'.'-'.$request->input('numero').'.'.$extension;
-                    $request->file('format04')->storeAs('public', $nombrePersonalizado4);
-                }
                 $pdf = self::generarPdf($person['codigo']);
                 $pdf['status']=true;
-                $pdf['message'] = 'Ud. se ha registrado Satifactoriamente, por favor haga click en el boton para desgar su codigo';
+                $pdf['message'] = 'Ud. se ha registrado Satifactoriamente, por favor haga click en el boton para descargar su codigo';
                 return json_encode($pdf);         
         } 
     }
@@ -128,10 +99,6 @@ class PersonController extends Controller
         'fecha' => 'required',
         'direccion' => 'required',
         'celular' => 'required',
-        'format01' => 'file|max:5000|mimes:pdf',
-        'format02' => 'file|max:5000|mimes:pdf',
-        'format03' => 'required|file|max:5000|mimes:pdf',        
-        'format04' => 'required|file|max:5000|mimes:pdf',
     ];
     private $message =[
         'pais.not_in' =>['status'=>'false','message'=>'Por favor seleccione Pais de Procedencia'],
@@ -149,20 +116,6 @@ class PersonController extends Controller
         'fecha.required' => ['status'=>'false','message'=>'Por favor ingrese fecha de Nacimiento'],
         'direccion.required' => ['status'=>'false','message'=>'Por favor ingrese Direccion'],
         'celular.required' => ['status'=>'false','message'=>'Por favor ingrese Celular'],
-        'format01.file' => ['status'=>'false','message'=>'El archivo debe ser un PDF valido.'],
-        'format01.max' => ['status'=>'false','message'=>'El archivo debe ser un archivo válido.'],
-        'format01.mimes' => ['status'=>'false','message'=>'El formato 01 debe ser un archivo PDF.'],
-        'format02.file' => ['status'=>'false','message'=>'El archivo debe ser de tipo PDF.'],
-        'format02.max' => ['status'=>'false','message'=>'El archivo no debe superar los 5 MB.'],
-        'format02.mimes' => ['status'=>'false','message'=>'El formato 02 debe ser un archivo PDF.'],
-        'format03.required' => ['status'=>'false','message'=>'El documento del FORMATO 03 es obligatorio'],
-        'format03.file' => ['status'=>'false','message'=>'El archivo debe ser de tipo PDF.'],
-        'format03.max' => ['status'=>'false','message'=>'El archivo no debe superar los 5 MB.'],
-        'format03.mimes' => ['status'=>'false','message'=>'El formato 03 debe ser un archivo PDF.'],
-        'format04.required' => ['status'=>'false','message'=>'El documento del FORMATO 04 es obligatorio'],
-        'format04.file' => ['status'=>'false','message'=>'El archivo debe ser de tipo PDF.'],
-        'format04.max' => ['status'=>'false','message'=>'El archivo no debe superar los 5 MB.'],
-        'format04.mimes' => ['status'=>'false','message'=>'El formato 04 debe ser un archivo PDF.'],
     ];
     /**
      * Store a newly created resource in storage.

@@ -73,6 +73,9 @@
                                 <p class="text-center title-number">
                                    NUMERO DE INSCRITO
                                 </p>
+                                <p class="text-center">
+                                   Por favor traer impreso sus formatos.
+                                </p>
                         </div>
                 </div>
             </div>
