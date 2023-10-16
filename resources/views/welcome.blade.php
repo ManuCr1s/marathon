@@ -75,7 +75,7 @@
                                 <img src="{{asset('assets/img/Coopac.jpeg')}}"  class="img-logo" alt="">
                             </div>
                             <div class="col-md-2 col-sm-4">
-                                <img src="{{asset('assets/img/Irun.jpeg')}}"  class="img-logo" alt="">
+                                <img src="{{asset('assets/img/muni_nina.jpeg')}}"  class="img-logo" alt="">
                             </div>
                             <div class="col-md-2 col-sm-4">
                                 <img src="{{asset('assets/img/Milpo.jpeg')}}"  class="img-logo" alt="">
@@ -99,7 +99,7 @@
                                
                             </div>
                             <div class="col-md-2">
-                                <img src="{{asset('assets/img/muni_nina.jpeg')}}"  class="img-logo" alt="">
+                                <img src="{{asset('assets/img/Irun.jpeg')}}"  class="img-logo" alt="">
                             </div>
                             <div class="col-md-2">
                                 <img src="{{asset('assets/img/portada.png')}}"  class="img-logo" alt="">
