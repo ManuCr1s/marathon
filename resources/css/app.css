@@ -369,3 +369,19 @@ html,body{
     font-size: 12px;
     color: #777;
   }
+  .icon-level{
+    color: #002E80;
+    font-size: 1.3em;
+    margin: 0 3% 0 0;
+  }
+  .text-level{
+    font-size: .9em;
+    letter-spacing: .2em;
+    font-family: Montserrat-Regular;
+    color: #022385;
+  }
+  .badge-level{
+    background-color: #002E80 !important;
+    font-size: .9em !important;
+    padding: 5% !important;
+  }

@@ -15,6 +15,24 @@
                     </div>
                 </div>
                 <hr>
+                <div class="row">
+                    <div class="col-md-12 my-4">
+                        <h5 class="text-center text-second"><b>Total de Inscritos por categorias</b></h5>
+                    </div>
+
+                    <div class="col-md-12">
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>ELITE VARONES</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="EV"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>ELITE MUJERES</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="EM"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>MASTER</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="MM"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>JUVENILES</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="JU"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>MENORES</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="MEN"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>JUNIOR</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-primary badge-level" id="JUN"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>INFANTIL</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="IN"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>HABILIDADES ESPECIALES - SORDO Y MUDO</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="HESM"></span></div></div>
+                            <div class="row my-2"><p class="text-level col-md-10"><i class="fa-solid fa-medal icon-level"></i>HABILIDADES ESPECIALES - VISUAL</p><div class="col-md-2 d-flex justify-content-end"><span class="badge badge-secondary badge-level" id="HECG"></span></div></div>
+                    </div>
+                </div>
+                <hr>
                 <div class="row my-5 ">
                     <div class="col-md-12"><p class="text-second">
                         <h5 class="text-center text-second">Fecha maxima de Inscripcion:</h5>

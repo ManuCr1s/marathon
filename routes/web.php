@@ -26,6 +26,7 @@ Route::controller(UserController::class)->group(function(){
 Route::controller(PersonController::class)->group(function(){
     Route::post('/dni','store')->name('dni');
     Route::post('/datos','file')->name('dates');
+    Route::post('/categoria','show_count')->name('level');
 });
 
 Route::controller(ProvinceController::class)->group(function(){

@@ -5,5 +5,6 @@ const route = {
     provincia:`${APP_ROUTE}/provincia`,
     distrito:`${APP_ROUTE}/distrito`,
     pais:`${APP_ROUTE}/paises`,
+    categoria:`${APP_ROUTE}/categoria`,
 }
 export default route 

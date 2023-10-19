@@ -4,7 +4,7 @@ import './date';
 import route from './route';
 import {valueForm} from './inputForms';
 import {onlyNumbers} from '../functions/functions_date';
-import {chainInput,chainInput2,dependency,dependency2,country} from "../functions/functions_main";
+import {chainInput,chainInput2,dependency,dependency2,country,countLevel} from "../functions/functions_main";
 $(document).ready(function(){
     $("#preloader").hide();
     let valoresForm = valueForm(),form01=$('#form01'),form02=$('#form02');
@@ -41,5 +41,8 @@ $(document).ready(function(){
         valoresForm.provincia,
         route.distrito,
         valoresForm.distrito,
+    )
+    countLevel(
+        route.categoria
     )
 });

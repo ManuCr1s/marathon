@@ -8,6 +8,8 @@ use App\Models\Person;
 use App\Models\Level;
 use Illuminate\Support\Facades\Storage;
 use PDF;
+use Illuminate\Support\Facades\DB;
+
 class PersonController extends Controller
 {
     public $token = 'apis-token-5761.59ZzjNAOFWADmBfvLbj8DvX98Yv1FDPH';
@@ -16,9 +18,14 @@ class PersonController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function show_count()
     {
-    
+        $result = DB::table('persons')
+        ->rightJoin('levels', 'levels.id_level', '=', 'persons.id_level')
+        ->select('levels.nombre', DB::raw('COUNT(persons.id_level) as total'), 'levels.cod')
+        ->groupBy('persons.id_level', 'levels.nombre','levels.cod')
+        ->get();
+        return json_encode($result);
     }
 
     public function file(Request $request)

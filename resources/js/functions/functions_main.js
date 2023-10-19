@@ -102,6 +102,27 @@ export function chainInput2(level,sexo,formato01,formato02){
         }
     });
 }
+export function countLevel(url){
+    $.ajax({
+        headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')},
+        type:'POST',
+        url:url,
+        success: function(datos){
+            let myData = $.parseJSON(datos);
+            console.log(myData);
+            for (const key in myData) {
+                if (myData.hasOwnProperty(key)) {
+                    const opcion = $('#'+myData[key].cod);
+                    opcion.text(myData[key].total);
+                    console.log(opcion);
+                }
+                
+            }
+            $("#preloader").hide();
+        }
+
+    });
+}
 
 /*Para todos los formulario*/
 export function alertInput(status,message){
@@ -208,7 +229,6 @@ export function country(selec,url){
             url:url,
             success: function(datos_dni){
                 let myData = $.parseJSON(datos_dni);
-                console.log(myData);
                 let increment = document.createElement('option'),
                 opciones = []; 
                 increment.value=0;

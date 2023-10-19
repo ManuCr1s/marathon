@@ -172,7 +172,7 @@
                         <hr class="my-4">
                         <div class="row my-4">
                             <div class="col-md-6">
-                                <h4 class="text-black">FORMATOS PARA ADJUNTAR</h4>
+                                <h5 class="text-dark">Formatos para adjuntar posteriomente</h5>
                             </div>
                             <div class="col-md-6">
                                 <a href="{{ route('download', ['nombreArchivo' => 'FORMATOS_01_02_03_04.pdf']) }}" class="btn btn-secondary d-flex justify-content-center"><i class="fa-solid fa-file icon-item"></i>DESCARGA FORMATOS</a>
