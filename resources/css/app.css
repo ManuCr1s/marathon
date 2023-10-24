@@ -46,6 +46,12 @@
         margin: 0;
         padding: 0;
     }
+    .title-form{
+        background: linear-gradient(#022385,#0088CA);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 1.5em;  
+    }
 }
 @media screen and (min-width: 769px)  {
     /* Estilos específicos para dispositivos móviles */
@@ -77,9 +83,15 @@
         font-family:  Montserrat-Regular;
     }
     .img-logo{
-        width: 90%;
+        width: 80%;
+        height: 80%;
         margin: 0;
         padding: 0;
+    }
+    .title-form{
+        background: linear-gradient(#022385,#0088CA);
+        -webkit-background-clip: text;
+        color: transparent;  
     }
 }
 /*------ INICIO DE CLASES DE LOGIN -------*/
@@ -271,11 +283,7 @@ html,body{
     background-color: white;
     box-shadow: 0px 21px 38px -21px rgba(0,0,0,0.68);
 }
-.title-form{
-    background: linear-gradient(#022385,#0088CA);
-    -webkit-background-clip: text;
-    color: transparent;  
-}
+
 .list-level{
    list-style: none;
    margin: 0;
