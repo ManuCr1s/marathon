@@ -1,4 +1,4 @@
-<ul class="list-group mb-3">
+<ul class="list-group mb-3 d-none d-md-block">
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
                                     <h6 class="my-0 bg-success text-white"><span>Paso uno</span></h6>

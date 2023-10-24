@@ -87,57 +87,44 @@
                 </div>
                 <hr class="my-5">
                 <div class="row">
-                    <div class="col-md-12 d-flex justify-content-center my-5">
-                        <div class="row w-75">
-                            <div class="col-md-2 col-sm-4">
-                                <img src="{{asset('assets/img/Coopac.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <img src="{{asset('assets/img/muni_nina.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <img src="{{asset('assets/img/Milpo.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <img src="{{asset('assets/img/muni_tinya.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <img src="{{asset('assets/img/mundo_zapatillas.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <img src="{{asset('assets/img/muni_carhuamayo.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                        </div>
-                        
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                            <img src="{{asset('assets/img/Coopac.jpeg')}}"  class="img-logo" alt="">
                     </div>
-                
-                    <div class="col-md-12 d-flex justify-content-center mt-2 mb-5">
-                        <div class="row w-75">
-                            <div class="col-md-2">
-                               
-                            </div>
-                            <div class="col-md-2">
-                                <img src="{{asset('assets/img/Irun.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2">
-                                <img src="{{asset('assets/img/portada.png')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2">
-                                <img src="{{asset('assets/img/gorepa.png')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2">
-                                <img src="{{asset('assets/img/mm_volvo.jpeg')}}"  class="img-logo" alt="">
-                            </div>
-                            <div class="col-md-2">
-                               
-                            </div>
-                        </div>
-                        
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/muni_nina.jpeg')}}"  class="img-logo" alt="">
                     </div>
-
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/Milpo.jpeg')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/muni_tinya.jpeg')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/mundo_zapatillas.jpeg')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/muni_carhuamayo.jpeg')}}"  class="img-logo" alt="">
+                    </div>
                 </div>
-                
-                
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/caja_maynas.jpeg')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/Irun.jpeg')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/portada.png')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/gorepa.png')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                        <img src="{{asset('assets/img/mm_volvo.jpeg')}}"  class="img-logo" alt="">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 d-flex justify-content-center my-3">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row bg-dark"><div class="col-md-12"><p class="text-white text-foot text-center">© Maratón Internacional Meseta del BomBón 2023</p></div></div>

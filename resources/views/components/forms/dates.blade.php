@@ -119,13 +119,13 @@
                             <label for="level">Categorias <span class="text-muted"></span></label>
                             <select class="custom-select d-block w-100" id="level" name="level" >
                                 <option value="10">Seleccione Categoria</option>
-                                <option value="1">Elite Varones</option>
-                                <option value="2">Elite Mujeres</option>
-                                <option value="3">Master</option>
-                                <option value="4">Juveniles</option>
-                                <option value="5">Menores</option>
-                                <option value="6">Junior</option>
-                                <option value="7">Infantil</option>
+                                <option value="1">Elite Varones - 18 años a mas</option>
+                                <option value="2">Elite Mujeres - 18 años a mas</option>
+                                <option value="3">Master - 40 años a mas</option>
+                                <option value="4">Juveniles - 15,16,17 años</option>
+                                <option value="5">Menores - 12,13,14 años</option>
+                                <option value="6">Junior - 10,11 años</option>
+                                <option value="7">Infantil - 7,8,9 años</option>
                                 <option value="8">Habilidades Especiales (Sordo y Mudo)</option>
                                 <option value="9">Habilidades Especiales (con ceguera)</option>
                             </select>
