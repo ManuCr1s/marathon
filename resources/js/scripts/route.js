@@ -6,5 +6,13 @@ const route = {
     distrito:`${APP_ROUTE}/distrito`,
     pais:`${APP_ROUTE}/paises`,
     categoria:`${APP_ROUTE}/categoria`,
+    login:`${APP_ROUTE}/login`,
+    main:`${APP_ROUTE}/`,
+    form:`${APP_ROUTE}/formulario`,
+    access:`${APP_ROUTE}/acceso`,
+    register:`${APP_ROUTE}/registro`,
+    inscription:`${APP_ROUTE}/inscrito`,
+    listadoI:`${APP_ROUTE}/listadoInscrito`,
+    listadoR:`${APP_ROUTE}/listadoRegistro`,
 }
 export default route 

@@ -393,3 +393,14 @@ html,body{
     font-size: .9em !important;
     padding: 5% !important;
   }
+  .text-dni{
+    font-size: .7em;
+  }
+  /*FORMULARIO DE LOGIN */
+
+  .form-login{
+    background-image:url('../../public/assets/img/maraton_6.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+  }

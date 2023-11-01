@@ -22,7 +22,6 @@
                         <span class="badge badge-secondary badge-pill number-bg">9</span>
                         --}}
                     </h4>
-                    
                     <x-forms.help/>
             </div>
             <div class="col-md-8 order-md-1">

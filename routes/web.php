@@ -18,15 +18,21 @@ use App\Http\Controllers\ProvinceController;
 Route::controller(UserController::class)->group(function(){
     Route::get('/','index')->name('welcome');
     Route::get('/formulario','form')->name('form');
-    Route::get('/tablero','dashboard')->name('dashboard');
+    Route::get('/tablero','dashboard')->middleware('auth')->name('dashboard');
+    Route::get('/registro','register')->middleware('auth')->name('register');
+    Route::get('/inscrito','inscription')->middleware('auth')->name('inscription');
     Route::get('/documents/{nombreArchivo}', 'download')->name('download');
     Route::get('/login','login')->name('login');
+    Route::post('/acceso','store')->name('access');
+    Route::post('/cerrar','logout')->name('logout');
 });
 
 Route::controller(PersonController::class)->group(function(){
     Route::post('/dni','store')->name('dni');
     Route::post('/datos','file')->name('dates');
     Route::post('/categoria','show_count')->name('level');
+    Route::get('/listadoInscrito','inscription')->name('listadoInscription');
+    Route::get('/listadoRegistro','register')->middleware('auth')->name('listadoRegistro');
 });
 
 Route::controller(ProvinceController::class)->group(function(){

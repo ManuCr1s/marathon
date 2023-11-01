@@ -81,22 +81,14 @@ export function chainInput2(level,sexo,formato01,formato02){
         if((level.val() == 1)){
             sexo.val(2); 
             sexo.addClass('disabled-input');
-            formato02.addClass('d-none');          
-            formato01.addClass('d-none');
         }else if((level.val() == 2)){
             sexo.val(1);
             sexo.addClass('disabled-input');
-            formato02.addClass('d-none');          
-            formato01.addClass('d-none');
         }else if((level.val() == 3)){
             sexo.removeClass('disabled-input');
             sexo.val(0);
-            formato02.addClass('d-none');          
-            formato01.addClass('d-none');
         }
         else{
-            formato02.removeClass('d-none');          
-            formato01.removeClass('d-none');
             sexo.removeClass('disabled-input');
             sexo.val(0);
         }

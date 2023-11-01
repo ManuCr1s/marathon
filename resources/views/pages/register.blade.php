@@ -3,15 +3,15 @@
     <x-navs.seconds/>
 @endsection
 @section('principal')
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row d-flex justify-content-center">
             <div class="col-md-11">
                     <div class="card m-5">
                         <div class="card-body p-4">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h5 class="card-title">TABLA DE INSCRITOS</h5>
-                                    <h6 class="card-subtitle mb-2 textd-desc">Visualizacion de todos los incritos</h6>
+                                    <h5 class="card-title">TABLA DE REGISTRADOS</h5>
+                                    <h6 class="card-subtitle mb-2 textd-desc">Visualizacion de todos los registrados a la maraton 2023</h6>
                                 </div>
                                 <div class="col-md-6 d-flex justify-content-end">
                                     <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal">
@@ -40,43 +40,28 @@
                             </div>
                        
                             <hr>
-                            <table id="inscritos" class="display" style="width:100%">
-                                <thead>
+                            <table id="registros" class="display" style="width:100%">
+                            <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
+                                        <th>DNI</th>
+                                        <th>NOMBRES</th>
+                                        <th>APELLIDOS</th>
+                                        <th>CATEGORIA</th>
+                                        <th>CODIGO</th>
+                                        <th>ACCIONES</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>$320,800</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>Accountant</td>
-                                        <td>Tokyo</td>
-                                        <td>63</td>
-                                        <td>2011-07-25</td>
-                                        <td>$170,750</td>
-                                    </tr>
+                                    
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
+                                        <th>DNI</th>
+                                        <th>NOMBRES</th>
+                                        <th>APELLIDOS</th>
+                                        <th>CATEGORIA</th>
+                                        <th>CODIGO</th>
+                                        <th>ACCIONES</th>
                                     </tr>
                                 </tfoot>
                             </table>

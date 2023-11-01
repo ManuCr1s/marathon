@@ -31,6 +31,7 @@
                                         <input type="text" class="form-control" id="number_doc" name="numero" placeholder="" value="" >
                                         <button class="btn btn-primary" id="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button>
                                     </div>
+                                    <p class="text-dni text-center"><b>(Por favor,hacer click en el icono de la lupita)</b></p>
                                 </div>
                                 
                                 <div class="invalid-feedback">

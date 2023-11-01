@@ -24,10 +24,27 @@ class PersonController extends Controller
         ->rightJoin('levels', 'levels.id_level', '=', 'persons.id_level')
         ->select('levels.nombre', DB::raw('COUNT(persons.id_level) as total'), 'levels.cod')
         ->groupBy('persons.id_level', 'levels.nombre','levels.cod')
+        ->where('persons.status', '=', '1')
         ->get();
         return json_encode($result);
     }
 
+    public function register(){
+        $result = DB::table('persons')
+        ->Join('levels', 'levels.id_level', '=', 'persons.id_level')
+        ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number_ins')
+        ->where('persons.status', '!=', null)
+        ->get();
+        return json_encode($result);
+    }
+    public function inscription(){
+        $result = DB::table('persons')
+        ->Join('levels', 'levels.id_level', '=', 'persons.id_level')
+        ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number_ins')
+        ->where('persons.number', '=', null)
+        ->get();
+        return datatables()->of($result)->toJson();
+    }
     public function file(Request $request)
     {
         
