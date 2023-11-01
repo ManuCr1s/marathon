@@ -16,7 +16,7 @@ export function tables(indentifyTable){
             {data:'number_ins'},
             {
                 render: function(data, type, row) {
-                    return '<div class="row"><input type="text" id="'+row.number_doc+'" class="form-control col-md-2"/><button class="editar btn btn-primary col-md-1">▼</button>';
+                    return '<div class="row"><input type="text" id="'+row.number_doc+'" class="form-control col-md-2"/><button class="editar btn btn-primary col-md-1">Registrar</button>';
                 },
                 orderable: false,
             }
