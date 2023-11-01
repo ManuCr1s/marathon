@@ -33,7 +33,8 @@ class PersonController extends Controller
         $result = DB::table('persons')
         ->Join('levels', 'levels.id_level', '=', 'persons.id_level')
         ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number_ins')
-        ->where('persons.status', '!=', null)
+        ->where('persons.number', '!=', null)
+        ->where('persons.status', '=', '1')
         ->get();
         return json_encode($result);
     }
@@ -42,6 +43,7 @@ class PersonController extends Controller
         ->Join('levels', 'levels.id_level', '=', 'persons.id_level')
         ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number_ins')
         ->where('persons.number', '=', null)
+        ->where('persons.status', '=', '1')
         ->get();
         return datatables()->of($result)->toJson();
     }
