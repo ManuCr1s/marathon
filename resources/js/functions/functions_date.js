@@ -64,3 +64,24 @@ export function data(nameTable,table){
         data.number_doc;*/
     });
 } 
+export function edades(nac){
+    let anios =new Date(nac),
+    now = new Date(),
+    year,
+    month,
+    days,
+    edad;
+    year = now.getUTCFullYear() - anios.getUTCFullYear();
+    month = now.getUTCMonth() - anios.getUTCMonth();
+    days= now.getUTCDate() - anios.getUTCDate();
+    if(days < 0){
+        month--;
+        days = 30 + days;
+    }
+    if(month < 0){
+        year--;
+        month = 12 + month;     
+    }
+    edad = year+' años/'+ month+' meses/'+days+' dias';
+    return {'edad':edad,'year':year,'month':month,'days':days};
+}

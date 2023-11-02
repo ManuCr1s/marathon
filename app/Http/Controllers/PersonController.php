@@ -41,7 +41,7 @@ class PersonController extends Controller
     public function inscription(){
         $result = DB::table('persons')
         ->Join('levels', 'levels.id_level', '=', 'persons.id_level')
-        ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number_ins')
+        ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number_ins','persons.born')
         ->where('persons.number', '=', null)
         ->where('persons.status', '=', '1')
         ->get();

@@ -47,6 +47,7 @@
                                         <th>NOMBRES</th>
                                         <th>APELLIDOS</th>
                                         <th>CATEGORIA</th>
+                                        <th>FECHA</th>
                                         <th>CODIGO</th>
                                         <th>REGISTRO DE NUMERO</th>
                                     </tr>
@@ -60,6 +61,7 @@
                                         <th>NOMBRES</th>
                                         <th>APELLIDOS</th>
                                         <th>CATEGORIA</th>
+                                        <th>FECHA</th>
                                         <th>CODIGO</th>
                                         <th>REGISTRO DE NUMERO</th>
                                     </tr>
