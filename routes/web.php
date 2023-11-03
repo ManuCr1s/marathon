@@ -31,6 +31,7 @@ Route::controller(PersonController::class)->group(function(){
     Route::post('/dni','store')->name('dni');
     Route::post('/datos','file')->name('dates');
     Route::post('/categoria','show_count')->name('level');
+    Route::post('/actualizarRegistro','update')->name('numberCorredor');
     Route::get('/listadoInscrito','inscription')->name('listadoInscription');
     Route::get('/listadoRegistro','register')->middleware('auth')->name('listadoRegistro');
 });

@@ -14,7 +14,7 @@
                 </li>
             </ul>
             <li class="nav-item dropdown">
-
+                <data id="user" value="{{Auth::user()->dni}}"></data>
                 <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
                 {{Auth::user()->dni}}
                 </a>

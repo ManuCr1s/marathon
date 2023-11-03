@@ -5,7 +5,7 @@ import route from './route';
 import {valueForm} from './inputForms';
 import {onlyNumbers} from '../functions/functions_date';
 import {chainInput,chainInput2,dependency,dependency2,country,countLevel} from "../functions/functions_main";
-import { tables } from './datatables';
+import { tables,tablesR} from './datatables';
 $(document).ready(function(){
     $("#preloader").hide();
     if(window.location.href === route.form){
@@ -20,5 +20,5 @@ $(document).ready(function(){
     }
     if(window.location.href === route.main)countLevel(route.categoria); 
     if(window.location.href === route.inscription)tables('#inscritos');
-    if(window.location.href === route.register)tables('#registros');
+    if(window.location.href === route.register)tablesR('#registros');
 });

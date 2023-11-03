@@ -32,11 +32,14 @@ class PersonController extends Controller
     public function register(){
         $result = DB::table('persons')
         ->Join('levels', 'levels.id_level', '=', 'persons.id_level')
-        ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number_ins')
+        ->Join('regions', 'regions.id_region', '=', 'persons.id_region')
+        ->Join('provinces', 'provinces.id_province', '=', 'persons.id_province')
+        ->Join('districts', 'districts.id_district', '=', 'persons.id_district')
+        ->select('persons.number_doc','persons.name','persons.lastname','levels.nombre','persons.number','regions.nombre as region','provinces.nombre as provincia','districts.nombre as distrito')
         ->where('persons.number', '!=', null)
         ->where('persons.status', '=', '1')
         ->get();
-        return json_encode($result);
+        return datatables()->of($result)->toJson();
     }
     public function inscription(){
         $result = DB::table('persons')
@@ -251,9 +254,14 @@ class PersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        if(mb_strlen($request->input('numero')) == 0 ) return json_encode(['status'=>false,'message'=>'Ingrese numero']);
+        $flight = Person::find($request->input('dni'));
+        $flight->number = $request->input('numero');
+        $flight->user = $request->input('user');
+        $flight->save();
+        return json_encode(['status'=>true,'message'=>'Se ingreso correctamente']);
     }
 
     /**

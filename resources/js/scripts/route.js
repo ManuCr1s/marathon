@@ -14,5 +14,6 @@ const route = {
     inscription:`${APP_ROUTE}/inscrito`,
     listadoI:`${APP_ROUTE}/listadoInscrito`,
     listadoR:`${APP_ROUTE}/listadoRegistro`,
+    updateI:`${APP_ROUTE}/actualizarRegistro`,
 }
 export default route 

@@ -40,19 +40,20 @@
                             </div>
                        
                             <hr>
-                            <table id="registros" class="display" style="width:100%">
+                            <table id="registros" class="display dt-buttons" style="width:100%">
                             <thead>
                                     <tr>
                                         <th>DNI</th>
                                         <th>NOMBRES</th>
                                         <th>APELLIDOS</th>
                                         <th>CATEGORIA</th>
-                                        <th>CODIGO</th>
-                                        <th>ACCIONES</th>
+                                        <th>NUMERO</th>
+                                        <th>REGION</th>
+                                        <th>PROVINCIA</th>
+                                        <th>DISTRITO</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -60,8 +61,10 @@
                                         <th>NOMBRES</th>
                                         <th>APELLIDOS</th>
                                         <th>CATEGORIA</th>
-                                        <th>CODIGO</th>
-                                        <th>ACCIONES</th>
+                                        <th>NUMERO</th>
+                                        <th>REGION</th>
+                                        <th>PROVINCIA</th>
+                                        <th>DISTRITO</th>
                                     </tr>
                                 </tfoot>
                             </table>

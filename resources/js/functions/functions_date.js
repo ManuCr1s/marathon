@@ -6,36 +6,10 @@ export function onlyNumbers(code){
     let variable = code.charCode;
     return variable >= 48 && variable <= 57;
 }
-/*
-export function calcular(id){
-    let input = $('#'+id),datos;
-    swal({
-        title: "¿Esta seguro de registrar numero de corredor?",
-        text: "Una vez registrada lel numero ya no se podra modificar",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) {
-            datos = {
-                'numero':input.val(),
-                'dni':id
-            };
-            $.ajax({
-                type:'POST',
-                url:routeChange('time'),
-                data:datos,
-                success:function(data){
-                    
-                }
-            });
-        } 
-      });
-}*/
-export function data(nameTable,table){
+export function data(nameTable,table,url){
     $(nameTable).on("click","button.editar",function(){
         let data = table.row($(this).parents('tr')).data();
+        let user = $('#user').attr('value');
         let input = $('#'+data.number_doc),datos;
         swal({
             title: "¿Esta seguro de registrar numero de corredor?",
@@ -43,25 +17,40 @@ export function data(nameTable,table){
             icon: "warning",
             buttons: true,
             dangerMode: true,
-          });
-          /*
-          .then((willDelete) => {
+          }).then((willDelete) => {
             if (willDelete) {
                 datos = {
                     'numero':input.val(),
-                    'dni':data.number_doc
+                    'dni':data.number_doc,
+                    'user':user
                 };
                 $.ajax({
+                    headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')},
                     type:'POST',
-                    url:,
+                    url:url,
                     data:datos,
                     success:function(data){
-                        
+                        let myData = $.parseJSON(data);
+                        if(myData.status){
+                            swal({
+                                title: "Felicitaciones",
+                                text: myData.message,
+                                icon: "success",
+                              }).then(()=>{
+                                window.location.reload(); 
+                            })
+                        }else{
+                            swal({
+                                title: "Upps hubo un problema",
+                                text: myData.message,
+                                icon: "warning",
+                              })
+                        }
                     }
                 });
             } 
           });
-        data.number_doc;*/
+        data.number_doc;
     });
 } 
 export function edades(nac){

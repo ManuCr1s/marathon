@@ -10,76 +10,14 @@
                         <div class="card-body p-4">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h5 class="card-title">TABLA DE INSCRITOS</h5>
-                                    <h6 class="card-subtitle mb-2 textd-desc">Visualizacion de todos los incritos</h6>
+                                    <h5 class="card-title">TABLAS DE INSCRITOS</h5>
+                                    <h6 class="card-subtitle mb-2 textd-desc">Visualizacion de todos los incritos y registrados </h6>
                                 </div>
                                 <div class="col-md-6 d-flex justify-content-end">
-                                    <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal">
-                                        INGRESE CODIGO
-                                    </button>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <a href="{{route('inscription')}}" class="btn btn-secondary btn-sm m-3"> PARTICIPANTES INSCRITOS</a>
+                                    <a href="{{route('register')}}" class="btn btn-secondary btn-sm m-3"> PARTICIPANTES REGISTRADOS</a>
                                 </div>
-                            </div>
-                       
-                            <hr>
-                            <table id="inscritos" class="display" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>$320,800</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>Accountant</td>
-                                        <td>Tokyo</td>
-                                        <td>63</td>
-                                        <td>2011-07-25</td>
-                                        <td>$170,750</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                            </div>            
                         </div>
                     </div>
             </div>
