@@ -27,19 +27,19 @@ export function tables(indentifyTable){
                         switch (row.nombre) {
                             case 'MASTER':
                                     edad = edades(row.born);
-                                    return (edad.year<40)?'<div class="row bg-warning">No cumple: tiene '+edad.edad+'</div>':row.born;
+                                    return (edad.year<40)?'<div class="row bg-warning">Tiene '+edad.edad+' '+row.born+'</div>':row.born;
                             case 'JUVENILES':
                                     edad = edades(row.born);
-                                    return (edad.year<14 || edad.year>17)?'<div class="row bg-warning">No cumple: tiene '+edad.edad+'</div>':row.born;
+                                    return (edad.year<14 || edad.year>17)?'<div class="row bg-warning">Tiene '+edad.edad+' '+row.born+'</div>':row.born;
                             case 'MENORES':
                                     edad = edades(row.born);
-                                    return (edad.year<11 || edad.year>14)?'<div class="row bg-warning">No cumple: tiene '+edad.edad+'</div>':row.born;
+                                    return (edad.year<11 || edad.year>14)?'<div class="row bg-warning">Tiene '+edad.edad+' '+row.born+'</div>':row.born;
                             case 'JUNIOR':
                                     edad = edades(row.born);
-                                    return (edad.year<10 || edad.year>11)?'<div class="row bg-warning">No cumple: tiene '+edad.edad+'</div>':row.born;
+                                    return (edad.year<10 || edad.year>11)?'<div class="row bg-warning">Tiene '+edad.edad+' '+row.born+'</div>':row.born;
                             case 'INFANTIL':
                                     edad = edades(row.born);
-                                    return (edad.year<6 || edad.year>9)?'<div class="row bg-warning">No cumple: tiene '+edad.edad+'</div>':row.born;
+                                    return (edad.year<6 || edad.year>9)?'<div class="row bg-warning">Tiene '+edad.edad+' '+row.born+'</div>':row.born;
                             default:
                                 return row.born;
                         }
